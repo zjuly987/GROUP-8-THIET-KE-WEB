@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VietNamTourist - Khám Phá Du Lịch Việt Nam</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .banner {
+    position: relative;
+    display: inline-block;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #e2c674;
+        }
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-img {
+            width: 100px;
+            height: auto;
+            border-radius: 10;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #2c5e50;
+            padding: 10px 0;
+            margin: 0;
+            border-radius: 10px; /* Bo tròn menu */
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 15px;
+            border-radius: 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #1e3d40;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .tours-container,
+        .combo-container,
+        .scenery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .tour-item,
+        .combo-item,
+        .scenery-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            text-align: center;
+            justify-content: flex-end;
+        }
+
+        .tour-item img,
+        .combo-item img,
+        .scenery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: flex; 
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        button {
+            background-color: #2c5e50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            justify-content: space-between;
+        }
+
+        button:hover {
+            background-color: #1e3d40;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo-cong-ty-du-lich-5.jpg" alt="Logo VietNamTourist" class="logo-img">
+            </a>
+        </div>
+        <h1>VietNamTourist</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="danhmuctour.html">Danh Mục Tour</a></li>
+                <li><a href="tourdanghot.html">Tour Đang Hot</a></li>
+                <li><a href="tourmoimo.html">Tour Mới Mở</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Chào Mừng Đến Với VietNamTourist</h1>
+            <p>Khám phá những điểm đến tuyệt đẹp và trải nghiệm du lịch đáng nhớ cùng chúng tôi!</p>
+            <img src="images/pexels-photo-30172036.jpeg" alt="Hình ảnh banner du lịch" class="banner-img">
+        </section>
+           
+
+        <section id="tours">
+            <h2>Tour Du Lịch vùng núi Bắc Bộ Đẹp Nhất</h2>
+            <div class="tours-container">
+                <div class="tour-item">
+                    <img src="images/ruongbacthang.jpg" alt="Tour Mù Cang Chải">
+                    <h3>Tour đi Mù Căng Chải 3 Ngày</h3>
+                    <p>Đến với vùng núi phía Bắc vào mùa hè này du khách sẽ bắt gặp được hình ảnh của những thửa ruộng
+                        bậc thang đang bước vào thời kỳ đổ nước, những thửa ruộng ngập tràn trong nước đẹp mắt khi bạn đặt chân đến nơi
+                        đây.</p>
+                </div>
+                <div class="tour-item">
+                    <img src="images/hagiang.jpg" alt="Tour Hà Giang">
+                    <h3>Tour Hà Giang - Quản Bạ 3 Ngày 2 Đêm</h3>
+                    <p>Hà Giang hùng vĩ, đèo Mã Pí Lèng hiểm trở, ruộng bậc thang xanh mướt, hoa tam giác mạch rực rỡ, chợ phiên nhộn nhịp, văn hóa dân tộc đặc sắc, núi non trùng điệp, thiên nhiên hoang sơ, trải nghiệm đáng nhớ.</p>
+            </div>
+        </section>
+        <section id="combo">
+            <h2>Tour Combo Kết Hợp: Giảm giá đến 30%!!!</h2>
+            <div class="combo-container">
+                <div class="combo-item">
+                    <img src="images/sapa.jpg" alt="Combo Hà Giang">
+                    <h3>Combo Sapa: 3 Ngày 2 Đêm</h3>
+                    <p>Tiết kiệm 30% với combo tour Sapa, bao gồm xe, khách sạn và các bữa ăn.
+                       Trải nghiệm và thưởng thức những khung cảnh tuyệt vời, hòa mình vào không khí se lạnh cùng người thân.</p>
+                </div>
+                <div class="combo-item">
+                    <img src="images/thacbandoc.jpg" alt="Combo Hà Giang">
+                    <h3>Combo du lịch Cao bằng : Thác bản Dốc</h3>
+                    <p>Cao Bằng – non nước hữu tình, thác Bản Giốc rực rỡ, động Ngườm Ngao kỳ vĩ, núi sông hùng vĩ, văn hóa đậm đà, ẩm thực độc đáo, con người mến khách – điểm đến không thể bỏ lỡ!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="scenery">
+            <h2>Cảnh Đẹp Du Lịch & Thiên Nhiên Đẹp Nhất</h2>
+            <div class="scenery-container">
+                <div class="scenery-item">
+                    <img src="images/mapileng.jpg" alt="Mã Pí Lèng">
+                    <p>Khám phá vẻ đẹp thiên nhiên tại các điểm đến nổi tiếng tại khung đèo Mã Pì Lèng.</p>
+                </div>
+                <div class="scenery-item">
+                    <img src="images/vinhhalong.jpg" alt="Vịnh Hạ Long">
+                    <p>Kỳ quan thiên nhiên, sóng nước hữu tình, non xanh huyền thoại, di sản thế giới, vẻ đẹp ngàn năm!.</p>
+                </div>
+                <div class="scenery-item">
+                    <img src="images/danang.webp" alt="Đà Nẵng">
+                    <p>Kỳ quan thiên nhiên, sóng nước hữu tình, non xanh huyền thoại, di sản thế giới, vẻ đẹp ngàn năm!.</p>
+                </div>
+                <div class="scenery-item">
+                    <img src="images/đại nội Huế_1661326240.jpg" alt="Huế">
+                    <p>Huế mộng mơ, di sản ngời, sông Hương lững lờ, núi Ngự xanh, tình người đậm sâu</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Liên Hệ</h2>
+            <p>Email: 12a4044040@hvnh.edu.vn | SĐT: 0123-456-789</p>
+            <p>Địa chỉ: 12 Chùa Bộc, Đống Đa, Hà Nội</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 VietNamTourist. Tất cả quyền được bảo lưu.</p>
+    </footer>
+</body>
+
+</html>
