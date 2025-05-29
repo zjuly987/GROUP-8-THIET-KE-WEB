@@ -1,29 +1,103 @@
-//slide ảnh
-  window.onload = function () {
-    let slideIndex = Math.floor(Math.random() * 3) + 1;
-    showSlides(slideIndex);
-
-    function changeSlide(n) {
-      showSlides(slideIndex += n);
+//header không che mất nội dung bên dưới
+  function updateMainPadding() {
+    const header = document.querySelector("header");
+    const main = document.querySelector(".intro-container");
+    if (header && main) {
+      main.style.paddingTop = header.offsetHeight + "px";
     }
+  }
 
-    function showSlides(n) {
-      const slides = document.getElementsByClassName("slide");
-      if (n > slides.length) slideIndex = 1;
-      if (n < 1) slideIndex = slides.length;
+  window.addEventListener("load", updateMainPadding);
+  window.addEventListener("resize", updateMainPadding);
+//ẩn đi
+let lastScrollTop = 0;
+window.addEventListener('scroll', function () {
+  const header = document.querySelector('header');
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const documentHeight = document.documentElement.scrollHeight;
+  const windowHeight = window.innerHeight;
+  const distanceToBottom = documentHeight - (scrollTop + windowHeight);
 
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+  if (distanceToBottom < 300) {
+    // Nếu gần đáy trang thì ẩn hoàn toàn
+    header.style.top = "-300px";
+  } else {
+    if (scrollTop > lastScrollTop) {
+      // Cuộn xuống → ẩn header ở -55px
+      header.style.top = "-55px";
+    } else {
+      // Cuộn lên → hiện lại header
+      header.style.top = "0";
+    }
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
+
+
+//ảnh slide giới thiệu tour
+let slideIndex = 0;
+let slides = document.getElementsByClassName("slide");
+let autoSlideTimer;
+
+function showSlide(n) {
+  if (n >= slides.length) { slideIndex = 0 }
+  if (n < 0) { slideIndex = slides.length - 1 }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[slideIndex].style.display = "block";
+}
+
+function changeSlide(n) {
+  clearTimeout(autoSlideTimer); // Dừng chạy tự động khi dùng nút
+  slideIndex += n;
+  showSlide(slideIndex);
+  autoSlide(); // Tiếp tục chạy tự động
+}
+
+function autoSlide() {
+  autoSlideTimer = setTimeout(() => {
+    slideIndex++;
+    showSlide(slideIndex);
+    autoSlide(); // gọi lại chính nó
+  }, 10000);
+}
+
+// Khởi tạo slide đầu tiên
+document.addEventListener("DOMContentLoaded", () => {
+  showSlide(slideIndex);
+  autoSlide();
+});
+
+// Hiện gt chung lịch trình
+window.addEventListener("scroll", function () {
+    const reveals = document.querySelectorAll(".day-section");
+    reveals.forEach((el) => {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      const revealPoint = 150;
+
+      if (elementTop < windowHeight - revealPoint) {
+        el.classList.add("active");
+      } else {
+        el.classList.remove("active"); // ẩn khi lướt qua
       }
-
-      slides[slideIndex - 1].style.display = "block";
-    }
-
-    // để gọi được từ HTML
-    window.changeSlide = changeSlide;
-  };
+    });
+  });
 
 
+//Lưu ý về giá tour
+function toggleDropdown(header) {
+  const content = header.nextElementSibling;
+  const isActive = header.classList.contains('active');
+  
+  // Toggle arrow and content
+  header.classList.toggle('active');
+  content.style.display = isActive ? 'none' : 'block';
+}
 //có thể bạn sẽ quan tâm
   function toggleMoreTours() {
     const more = document.getElementById("moreTours");
@@ -53,3 +127,4 @@
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
