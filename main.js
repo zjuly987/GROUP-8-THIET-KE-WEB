@@ -65,42 +65,46 @@ document.addEventListener('click', function(e) {
   }
 });
 
-// Cập nhật padding cho phần nội dung dưới header
-function updateMainPadding() {
-  const header = document.querySelector("header");
-  const main = document.querySelector(".main-content");
-  if (header && main) {
-    main.style.paddingTop = header.offsetHeight + "px";
-  }
-}
-
-window.addEventListener("load", updateMainPadding);
-window.addEventListener("resize", updateMainPadding);
-
-// Ẩn hiện header khi cuộn
-let lastScrollTop = 0;
-
-window.addEventListener('scroll', function () {
-  const header = document.querySelector('header');
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  const documentHeight = document.documentElement.scrollHeight;
-  const windowHeight = window.innerHeight;
-  const distanceToBottom = documentHeight - (scrollTop + windowHeight);
-
-  if (distanceToBottom < 300) {
-    header.style.top = "-300px";
-  } else {
-    if (scrollTop > lastScrollTop) {
-      header.style.top = "-80px";
-    } else {
-      header.style.top = "0";
+// JS header không che mất nội dung bên dưới
+  function updateMainPadding() {
+    const header = document.querySelector("header");
+    const main = document.querySelector(".intro-container");
+    if (header && main) {
+      main.style.paddingTop = header.offsetHeight + "px";
     }
   }
 
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  window.addEventListener("load", updateMainPadding);
+  window.addEventListener("resize", updateMainPadding);
+
+  window.addEventListener('scroll', function () {
+  const header = document.querySelector('header');
+  const scrollTop = window.pageYOffset;
+
+  if (scrollTop > 100) {
+    header.style.top = "-55px";  // Ẩn header khi cuộn xuống
+  } else {
+    header.style.top = "0";      // Hiện lại khi cuộn lên
+  }
 });
 
-// Chạy slide dưới banner
+//ẩn đi
+window.addEventListener('scroll', function () {
+  const header = document.querySelector('header'); //Lấy phần tử <header> trong trang và gán vào biến header
+  const scrollTop = window.pageYOffset; //Lấy vị trí cuộn hiện tại theo chiều dọc của trang (tính từ trên xuống)
+  const documentHeight = document.documentElement.scrollHeight;
+  const windowHeight = window.innerHeight;//Chiều cao của vùng hiển thị (viewport)
+  const distanceToBottom = documentHeight - (scrollTop + windowHeight); //khoảng cách còn lại từ đáy màn hình hiện tại đến đáy trang web
+
+  // Nếu cách đáy trang < 300px thì ẩn header
+  if (distanceToBottom < 300) {
+    header.style.top = "-300px"; // đẩy header ra khỏi màn hình
+  } else {
+    header.style.top = "0";
+  }
+});
+
+//chạy slide dưới banner
 let underbannerIndex = 0;
 let underbannerSlides = document.getElementsByClassName("underbanner-slide");
 let underbannerTimer;
