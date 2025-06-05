@@ -283,7 +283,6 @@ header {
 }
 .tour-item p {
   font-size: 14px;
- 
   font-weight: bold;
 }
 .tour-item .rating {
@@ -387,7 +386,7 @@ header {
 .carousel {
   display: flex;
   animation: slide 20s infinite linear;
-
+}
 .carousel img {
   width: 150px;
   height: 100px;
