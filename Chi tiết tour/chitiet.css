@@ -960,3 +960,35 @@ background-color: #ccc;
 .remove-btn:hover {
   color: darkred;
 }
+
+.cart-content h3 {
+  font-size: 22px;
+  text-align: center;
+  color: #0F5DA6;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.cart-table td, .cart-table th {
+  font-size: 16px;
+  color: #333;
+}
+
+.product-info span {
+  font-weight: bold;
+  color: #0F5DA6;
+}
+
+.cart-footer {
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+  padding-top: 15px;
+  font-size: 16px;
+}
+
+.cart-actions button {
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
