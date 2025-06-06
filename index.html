@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trang chủ - VIETWANDER</title>
   <link rel="stylesheet" href="main.css">
-  <script src="main.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -32,20 +32,27 @@
         <li><a href="index.html">TRANG CHỦ</a></li>
         <li><a href="Giới thiệu/gioithieu.html">GIỚI THIỆU</a></li>
         <li class="has-dropdown">
-          <a href="#">DANH MỤC TOUR</a>
+          <a href="#">DANH MỤC TOUR <i class="fa fa-chevron-down"></i></a>
           <ul class="dropdown">
-            <li><a href="Danh mục tour/Danh mục tour miền Bắc.html">Tour miền Bắc</a></li>
-            <li><a href="Danh mục tour/Danh mục tour miền Trung.html">Tour miền Trung</a></li>
-            <li><a href="Danh mục tour/Danh mục tour miền Nam.html">Tour miền Nam</a></li>
+            <li><a href="Danh mục tour/danhmuctourmienbac.html">Tour miền Bắc</a></li>
+            <li><a href="Danh mục tour/danhmuctourmientrung.html">Tour miền Trung</a></li>
+            <li><a href="Danh mục tour/danhmuctourmiennam.html">Tour miền Nam</a></li>
           </ul>
         </li>
         <li><a href="Trang tin tức/Tin tức.html">TIN TỨC</a></li>
         <li><a href="Liên hệ/contact.html">LIÊN HỆ</a></li>
-        <li><a href="#"><i class="fa-solid fa-bag-shopping"></i> GIỎ HÀNG</a></li>
+        <li class="cart-item">
+          <a href="#" id="cartLink"><i class="fa-solid fa-bag-shopping"></i> GIỎ HÀNG</a>
+          <div id="cartDropdown" class="cart-dropdown" style="display: none;">
+            <div id="cartItems"></div>
+            <button id="viewCart">Xem giỏ hàng</button>
+            <button id="checkout"><a href="../Thanh Toán/thanhtoan.html"></a>Thanh toán</button>
+          </div>
+        </li>
       </ul>
       <div class="search-container">
-        <input type="text" placeholder="Tìm kiếm...">
-        <button class="search-btn"><img src="images/Icon&logo/search@2x.png" alt="Search"></button>
+        <input type="text" id="searchInput" placeholder="Tìm kiếm...">
+        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
       </div>
     </nav>
   </header>
@@ -54,18 +61,18 @@
   <!--slide banner dưới header-->
   <div class="underbanner-slideshow">
     <div class="underbanner-slide active">
-      <a href="Chi tiết tour/tphcmdananghuehoian5n4d.html">
-        <img src="images/Banner/1.jpg" alt="Tour Miền Trung">
+      <a href="tour-noi-bat1.html">
+        <img src="images/Banner/1.jpg" alt="Tour nổi bật 1">
       </a>
     </div>
     <div class="underbanner-slide">
-      <a href="Chi tiết tour/hanoitrongngay.html">
-        <img src="images/Banner/2.jpg" alt="Tour Hà Nội">
+      <a href="tour-noi-bat2.html">
+        <img src="images/Banner/2.jpg" alt="Tour nổi bật 2">
       </a>
     </div>
     <div class="underbanner-slide">
-      <a href="Chi tiết tour/hanoisoctrangbaclieucamau4n3d.html">
-        <img src="images/Banner/3.jpg" alt="Tour Miền Nam">
+      <a href="tour-noi-bat3.html">
+        <img src="images/Banner/3.jpg" alt="Tour nổi bật 3">
       </a>
     </div>
     <!-- Nút điều hướng -->
@@ -75,133 +82,186 @@
 
   <div class="home-tour-section">
     <div class="main-content">
-    <!-- Tour Bán Chạy -->
-    <h3>TOUR BÁN CHẠY</h3>
-    <div class="tour-grid">
-      <div class="tour-item">
-        <div class="best-seller">BEST SELLER</div>
-        <div class="tour-img-wrapper">
-          <img class="default-img" src="images/Trang chủ/tourdalat2.jpg" alt="Tour Đà Lạt">
-          <img class="hover-img" src="images/Trang chủ/tourdalat2hover.jpg" alt="Tour Đà Lạt hover">
+      <!-- Tour Bán Chạy -->
+      <h3>TOUR BÁN CHẠY</h3>
+      <div class="tour-grid">
+        <div class="tour-item">
+          <div class="best-seller">BEST SELLER</div>
+          <div class="tour-img-wrapper">
+            <img class="default-img" src="images/Trang chủ/tourdalat2.jpg" alt="Tour Đà Lạt">
+            <img class="hover-img" src="images/Trang chủ/tourdalat2hover.jpg" alt="Tour Đà Lạt hover">
+          </div>
+          <h3>Tour TpHCM - Đà Lạt 3N2Đ</h3>
+          <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: TP. Hồ Chí Minh - Đà Lạt - Dinh Bảo Đại
+            - Thác Datanla - Núi Langbiang - Ga xe lửa cổ - TP. Hồ Chí Minh</p>
+          <p class="transport"><i class="fas fa-bus"></i> Phương tiện: Ô tô du lịch đời mới</p>
+          <div class="tour-info">
+            <p class="price">3.899.000đ <s>4.299.000đ</s></p>
+            <button class="book-now-btn" onclick="addToCart('tp-ho-chi-minh-da-lat')"><a
+                href="Chi tiết tour/tphcmdalat3n2d.html">Đặt Ngay</a></button>
+          </div>
+          <div class="rating">★★★★★</div>
         </div>
-        <h3>Tour TpHCM - Đà Lạt 2N1D</h3>
-        <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: TP.HCM - Đà Lạt - TP.HCM</p>
-        <p class="transport"><i class="fas fa-bus"></i> Phương tiện: Xe du lịch</p>
-        <p class="price">2.190.000đ</p>
-        <div class="rating">★★★★★</div>
-      </div>
-      <div class="tour-item">
-        <div class="best-seller">BEST SELLER</div>
-        <div class="tour-img-wrapper">
-          <img class="default-img" src="images/Trang chủ/tourphuquoc2.webp" alt="Tour Phú Quốc">
-          <img class="hover-img" src="images/Trang chủ/tourphuquoc2hover.jpg" alt="Tour Phú Quốc hover">
+        <div class="tour-item">
+          <div class="best-seller">BEST SELLER</div>
+          <div class="tour-img-wrapper">
+            <img class="default-img" src="images/Trang chủ/tourphuquoc2.webp" alt="Tour Phú Quốc">
+            <img class="hover-img" src="images/Trang chủ/tourphuquoc2hover.jpg" alt="Tour Phú Quốc hover">
+          </div>
+          <h3>Tour Tp Hồ Chí Minh - Phú Quốc - Vinpearl Land - Đảo Ngọc 4N3Đ</h3>
+          <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: TP. Hồ Chí Minh - Phú Quốc - Vin
+            Wonders - Làng Chài Hàm Ninh - Sunset Sanato - Dinh Cậu Nam Đảo - Vinpearl Safari - Nhà Tù Phú Quốc Bãi Sao
+            - TP. Hồ Chí Minh</p>
+          <p class="transport"><i class="fas fa-plane"></i> Phương tiện: Máy bay + Xe đưa đón</p>
+          <div class="tour-info">
+            <p class="price">6.499.000đ <s>7.299.000đ</s></p>
+            <a class="book-now-btn" onclick="addToCart('tp-ho-chi-minh-phu-quoc')"
+              href="Chi tiết tour/phuquocvindaongoc4n3d.html">Đặt Ngay</a>
+          </div>
+          <div class="rating">★★★★★</div>
         </div>
-        <h3>Tour Phú Quốc 4N3D</h3>
-        <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Phú Quốc - Hà Nội</p>
-        <p class="transport"><i class="fas fa-plane"></i> Phương tiện: Máy bay + Xe đưa đón</p>
-        <p class="price">5.990.000đ</p>
-        <div class="rating">★★★★★</div>
-      </div>
-      <div class="tour-item">
-        <div class="best-seller">BEST SELLER</div>
-        <div class="tour-img-wrapper">
-          <img class="default-img" src="images/Trang chủ/tournhatrang1.jpg" alt="Tour Nha Trang">
-          <img class="hover-img" src="images/Trang chủ/tournhatrang1hover.webp" alt="Tour Nha Trang hover">
-        </div>
-        <h3>Tour TpHCM - Nha Trang 4N3D</h3>
-        <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: TP.HCM - Nha Trang - TP.HCM</p>
-        <p class="transport"><i class="fas fa-bus"></i> Phương tiện: Xe khách giường nằm</p>
-        <p class="price">4.990.000đ</p>
-        <div class="rating">★★★★★</div>
-      </div>
-      <div class="tour-item">
-        <div class="best-seller">BEST SELLER</div>
-        <div class="tour-img-wrapper">
-          <img class="default-img" src="images/Trang chủ/tourdanang1.png" alt="Tour Đà Nẵng">
-          <img class="hover-img" src="images/Trang chủ/tourdanang1hover.jpg" alt="Tour Đà Nẵng hover">
-        </div>
-        <h3>Tour Đà Nẵng - Hội An 3N2D</h3>
-        <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Đà Nẵng - Hội An - Bà Nà Hills</p>
-        <p class="transport"><i class="fas fa-plane"></i> Phương tiện: Máy bay + Xe du lịch</p>
-        <p class="price">3.990.000đ</p>
-        <div class="rating">★★★★★</div>
-      </div>
-      <div class="tour-item">
-        <div class="best-seller">BEST SELLER</div>
-        <div class="tour-img-wrapper">
-          <img class="default-img" src="images/Trang chủ/tourhalong1.jpg" alt="Tour Hạ Long">
-          <img class="hover-img" src="images/Trang chủ/tourhalong1hover.webp" alt="Tour Hạ Long hover">
-        </div>
-        <h3>Tour Hà Nội - Vịnh Hạ Long 2N1D</h3>
-        <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Hạ Long - Hà Nội</p>
-        <p class="transport"><i class="fas fa-bus"></i> Phương tiện: Xe du lịch</p>
-        <p class="price">2.200.000đ</p>
-        <div class="rating">★★★★★</div>
-      </div>
-      <div class="tour-item">
-        <div class="best-seller">BEST SELLER</div>
-        <div class="tour-img-wrapper">
-          <img class="default-img" src="images/Trang chủ/tourcondao1.jpg" alt="Tour Côn Đảo">
-          <img class="hover-img" src="images/Trang chủ/tourcondao1hover.jpg" alt="Tour Côn Đảo hover">
-        </div>
-        <h3>Tour Côn Đảo 3N2D</h3>
-        <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: TP.HCM - Côn Đảo - TP.HCM</p>
-        <p class="transport"><i class="fas fa-plane"></i> Phương tiện: Máy bay</p>
-        <p class="price">4.100.000đ</p>
-        <div class="rating">★★★★★</div>
-      </div>
-      <div class="tour-item">
-        <div class="best-seller">BEST SELLER</div>
-        <div class="tour-img-wrapper">
-          <img class="default-img" src="images/Trang chủ/toursamson1.jpg" alt="Tour Sầm Sơn">
-          <img class="hover-img" src="images/Trang chủ/toursamson1hover.jpg" alt="Tour Sầm Sơn hover">
-        </div>
-        <h3>Tour Hà Nội - Sầm Sơn 2N1D</h3>
-        <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Sầm Sơn - Hà Nội</p>
-        <p class="transport"><i class="fas fa-bus"></i> Phương tiện: Xe du lịch</p>
-        <p class="price">1.800.000đ</p>
-        <div class="rating">★★★★★</div>
-      </div>
-      <div class="tour-item">
-        <div class="best-seller">BEST SELLER</div>
-    <div class="tour-img-wrapper">
-      <img class="default-img" src="images/Trang chủ/tourmochau1.jpg" alt="Tour Mộc Châu">
-      <img class="hover-img" src="images/Trang chủ/tourmochau1hover.png" alt="Tour Mộc Châu hover">
-    </div>
-    <h3>Tour Mộc Châu 2N1D</h3>
-    <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Mộc Châu - Hà Nội</p>
-    <p class="transport"><i class="fas fa-bus"></i> Phương tiện: Xe du lịch</p>
-    <p class="price">1.800.000đ</p>
-    <div class="rating">★★★★★</div>
-  </div>
 
-</div>
+        <div class="tour-item">
+          <div class="best-seller">BEST SELLER</div>
+          <div class="tour-img-wrapper">
+            <img class="default-img" src="images/Trang chủ/tournhatrang1.jpg" alt="Tour Nha Trang">
+            <img class="hover-img" src="images/Trang chủ/tournhatrang1hover.webp" alt="Tour Nha Trang hover">
+          </div>
+          <h3>Tour TpHCM - Nha Trang 4N3Đ</h3>
+          <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Nha Trang - Hòn Mun - Tháp Bà
+            Ponagar - Thủy cung Vinpearl - Chùa Long Sơn - Hà Nội</p>
+          <p class="transport"><i class="fas fa-bus"></i> Phương tiện: Xe khách giường nằm</p>
+          <div class="tour-info">
+            <p class="price">7.389.000đ <s>7.889.000đ</s></p>
+            <a class="book-now-btn" onclick="addToCart('ha-noi-nha-trang')"
+              href="Chi tiết tour/hanoinhatrang4n3d.html">Đặt Ngay</a>
+          </div>
+          <div class="rating">★★★★★</div>
+        </div>
 
-<!-- tour gợi ý -->
- <h3>MỘT SỐ TOUR GỢI Ý</h3>
+        <div class="tour-item">
+          <div class="best-seller">BEST SELLER</div>
+          <div class="tour-img-wrapper">
+            <img class="default-img" src="images/Trang chủ/tourdanang1.png" alt="Tour Đà Nẵng">
+            <img class="hover-img" src="images/Trang chủ/tourdanang1hover.jpg" alt="Tour Đà Nẵng hover">
+          </div>
+          <h3>Tour TP. Hồ Chí Minh - Đà Nẵng - Huế - Hội An 5N4Đ</h3>
+          <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: TP. Hồ Chí Minh - Đà Nẵng - Linh Ứng Tự
+            - Bảo tàng Đà Nẵng - Hội An - Chùa Cầu - Nhà cổ - Huế - Lăng Khải Định - Đại Nội Triều Nguyễn - Chùa Thiên
+            Mụ - TP. Hồ Chí Minh</p>
+          <p class="transport"><i class="fas fa-plane"></i> Phương tiện: Máy bay + Xe du lịch</p>
+          <div class="tour-info">
+            <p class="price">8.199.000đ <s>8.699.000đ</s></p>
+            <a class="book-now-btn" onclick="addToCart('tp-ho-chi-minh-da-nang-hue-hoi-an')"
+              href="Chi tiết tour/tphcmdananghuehoian5n4d.html">Đặt Ngay</a>
+          </div>
+          <div class="rating">★★★★★</div>
+        </div>
+
+        <div class="tour-item">
+          <div class="best-seller">BEST SELLER</div>
+          <div class="tour-img-wrapper">
+            <img class="default-img" src="images/Trang chủ/tourhalong1.jpg" alt="Tour Hạ Long">
+            <img class="hover-img" src="images/Trang chủ/tourhalong1hover.webp" alt="Tour Hạ Long hover">
+          </div>
+          <h3>Tour Hà Nội - Vịnh Hạ Long 3N2Đ</h3>
+          <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Hạ Long - Bãi Cháy - Vịnh Hạ
+            Long - Hà Nội</p>
+          <p class="transport"><i class="fas fa-bus"></i> Phương tiện: Xe khách du lịch</p>
+          <div class="tour-info">
+            <p class="price">3.099.000 đ <s>3.699.000đ</s></p>
+            <a class="book-now-btn" onclick="addToCart('ha-noi-vinh-ha-long')"
+              href="Chi tiết tour/hanoihalong3n2d.html">Đặt Ngay</a>
+          </div>
+          <div class="rating">★★★★★</div>
+        </div>
+
+        <div class="tour-item">
+          <div class="best-seller">BEST SELLER</div>
+          <div class="tour-img-wrapper">
+            <img class="default-img" src="images/Trang chủ/tourcondao1.jpg" alt="Tour Côn Đảo">
+            <img class="hover-img" src="images/Trang chủ/tourcondao1hover.jpg" alt="Tour Côn Đảo hover">
+          </div>
+          <h3>Tour TP.HCM - Côn Đảo 4N3Đ</h3>
+          <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: TPHCM - Địa ngục trần gian Côn Đảo -
+            Khu Nam Đảo - Khu Bắc Đảo - Vịnh Côn Sơn - TPHCM</p>
+          <p class="transport"><i class="fas fa-plane"></i> Phương tiện: Máy bay</p>
+          <div class="tour-info">
+            <p class="price">7.850.000đ <s>8.500.000đ</s></p>
+            <a class="book-now-btn" onclick="addToCart('tp-ho-chi-minh-con-dao')"
+              href="Chi tiết tour/tphcmcondao4n3d.html">Đặt Ngay</a>
+          </div>
+          <div class="rating">★★★★★</div>
+        </div>
+
+        <div class="tour-item">
+          <div class="best-seller">BEST SELLER</div>
+          <div class="tour-img-wrapper">
+            <img class="default-img" src="images/Trang chủ/toursamson1.jpg" alt="Tour Sầm Sơn">
+            <img class="hover-img" src="images/Trang chủ/toursamson1hover.jpg" alt="Tour Sầm Sơn hover">
+          </div>
+          <h3>Tour Hà Nội - Sầm Sơn 3N2D</h3>
+          <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Sầm Sơn - Chùa Cô Tiên - Đền
+            Độc Cước - Biển Sầm Sơn - Hà Nội</p>
+          <p class="transport"><i class="fas fa-bus"></i> Phương tiện: Xe du lịch</p>
+          <div class="tour-info">
+            <p class="price">1.800.000đ</p>
+            <a class="book-now-btn" onclick="addToCart('ha-noi-sam-son')" href="Chi tiết tour/hanoisamson3n2d.html">Đặt
+              Ngay</a>
+          </div>
+          <div class="rating">★★★★★</div>
+        </div>
+
+        <div class="tour-item">
+          <div class="best-seller">BEST SELLER</div>
+          <div class="tour-img-wrapper">
+            <img class="default-img" src="images/Trang chủ/tourmochau1.jpg" alt="Tour Mộc Châu">
+            <img class="hover-img" src="images/Trang chủ/tourmochau1hover.png" alt="Tour Mộc Châu hover">
+          </div>
+          <h3>Tour Mộc Châu 2N1D</h3>
+          <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Mộc Châu - thác Dải Yếm - Rừng
+            thông Bản Áng - Trang trại bò sữa Mộc Châu - Hà Nội</p>
+          <p class="transport"><i class="fas fa-bus"></i> Phương tiện: Ô tô du lịch</p>
+          <div class="tour-info">
+            <p class="price">1.599.000đ <s>2.099.000đ</s></p>
+            <a class="book-now-btn" onclick="addToCart('moc-chau')" href="Chi tiết tour/hanoimocchau2n1d.html">Đặt
+              Ngay</a>
+          </div>
+          <div class="rating">★★★★★</div>
+        </div>
+
+      </div>
+
+      <!-- Tour gợi ý -->
+<h3>MỘT SỐ TOUR GỢI Ý</h3>
 <div class="tour-grid">
-
   <div class="tour-item">
     <div class="tour-img-wrapper">
-      <img class="default-img" src="images/Trang chủ/tourhue1.jpg" alt="Tour Huế">
-      <img class="hover-img" src="images/Trang chủ/tourhue1hover.jpg" alt="Tour Huế hover">
+      <img class="default-img" src="images/Trang chủ/da_nang.jpg" alt="Tour Đà Nẵng - Quảng Nam">
+      <img class="hover-img" src="images/Trang chủ/quang_nam.webp" alt="Tour Đà Nẵng - Quảng Nam hover">
     </div>
-    <h3>Tour Huế 3N2D</h3>
-    <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: TP.HCM - Huế - TP.HCM</p>
-    <p class="transport"><i class="fas fa-plane"></i> Phương tiện: Máy bay + Xe du lịch</p>
-    <p class="price">3.200.000đ</p>
+    <h3>Tour Đà Nẵng - Quảng Nam 3N2Đ</h3>
+    <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Đà Nẵng - Ngũ Hành Sơn - Biển Mỹ Khê - Bà Nà Hills - Phố cổ Hội An - Thánh địa Mỹ Sơn - Đà Nẵng</p>
+    <p class="transport"><i class="fas fa-plane"></i> Phương tiện: Xe khách</p>
+    <div class="tour-info">
+      <p class="price">5.499.000đ <s>6.199.000đ</s></p>
+      <a class="book-now-btn" onclick="addToCart('da-nang-quang-nam')" href="Chi tiết tour/danangquangnam3n2d.html">Đặt Ngay</a>
+    </div>
     <div class="rating">★★★★★</div>
   </div>
 
   <div class="tour-item">
     <div class="tour-img-wrapper">
-      <img class="default-img" src="images/Trang chủ/tourdananghuehoian.jpg" alt="Tour Đà Nẵng - Huế - Hội An">
-      <img class="hover-img" src="images/Trang chủ/tourdananghuehoianhover.jpg" alt="Tour Đà Nẵng - Huế - Hội An hover">
+      <img class="default-img" src="images/Trang chủ/soc_trang.jpg" alt="Tour Hà Nội - Sóc Trăng - Bạc Liêu - Cà Mau">
+      <img class="hover-img" src="images/Trang chủ/bac_lieu.png" alt="Tour Hà Nội - Sóc Trăng - Bạc Liêu - Cà Mau hover">
     </div>
     <h3>Tour TPHCM - Đà Nẵng - Huế - Hội An 5N4D</h3>
     <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: TP.HCM - Đà Nẵng - Huế - Hội An</p>
     <p class="transport"><i class="fas fa-plane"></i> Phương tiện: Máy bay + Xe du lịch</p>
-    <p class="price">4.990.000đ</p>
+    <div class="tour-info">
+      <p class="price">6.200.000đ <s>7.000.000đ</s></p>
+      <a class="book-now-btn" onclick="addToCart('tphcm-danang-hue-hoian')" href="Chi tiết tour/tphcmdananghuehoian5n4d.html">Đặt Ngay</a>
+    </div>
     <div class="rating">★★★★★</div>
   </div>
 
@@ -210,34 +270,43 @@
       <img class="default-img" src="images/Trang chủ/tourquynhon.jpg" alt="Tour Quy Nhơn - Phú Yên">
       <img class="hover-img" src="images/Trang chủ/tourquynhonhover.jpg" alt="Tour Quy Nhơn - Phú Yên hover">
     </div>
-    <h3>Tour Quy Nhơn - Phú Yên 3N2D</h3>
-    <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: TP.HCM - Quy Nhơn - Phú Yên - TP.HCM</p>
-    <p class="transport"><i class="fas fa-bus"></i> Phương tiện: Xe khách giường nằm</p>
-    <p class="price">3.500.000đ</p>
+    <h3>TP. Hồ Chí Minh - Phú Yên - Quy Nhơn 3N2Đ</h3>
+    <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: TP. Hồ Chí Minh - Phú Yên - Gành Đá Đĩa - Bãi Xép - Quy Nhơn - Eo Gió - Kỳ Co - Tháp Đôi - Tháp Nhạn - TP. Hồ Chí Minh</p>
+    <p class="transport"><i class="fas fa-bus"></i> Phương tiện: Xe khách</p>
+    <div class="tour-info">
+      <p class="price">3.499.000đ <s>3.999.000đ</s></p>
+      <a class="book-now-btn" onclick="addToCart('phu-yen-quy-nhon')" href="Chi tiết tour/phuyenquynhon3n2d.html">Đặt Ngay</a>
+    </div>
     <div class="rating">★★★★★</div>
   </div>
 
   <div class="tour-item">
     <div class="tour-img-wrapper">
-      <img class="default-img" src="images/Trang chủ/tourhagiang.jpg" alt="Tour Hà Giang">
-      <img class="hover-img" src="images/Trang chủ/tourhagianghover.webp" alt="Tour Hà Giang hover">
+      <img class="default-img" src="images/Trang chủ/sap_pa.jpg" alt="Tour Sapa">
+      <img class="hover-img" src="images/Trang chủ/fansipan.jpg" alt="Tour Sapa hover">
     </div>
-    <h3>Tour Hà Nội - Hà Giang 3N2D</h3>
-    <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Hà Giang - Hà Nội</p>
+    <h3>Tour Hà Nội - Sapa 3N2Đ</h3>
+    <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Sapa - Bản Cát Cát - Đỉnh Fansipan - núi Hàm Rồng - Hà Nội</p>
     <p class="transport"><i class="fas fa-bus"></i> Phương tiện: Xe du lịch</p>
-    <p class="price">3.990.000đ</p>
+    <div class="tour-info">
+      <p class="price">2.599.000đ <s>2.999.000đ</s></p>
+      <a class="book-now-btn" onclick="addToCart('ha-noi-sapa')" href="Chi tiết tour/hanoisapa3n2d.html">Đặt Ngay</a>
+    </div>
     <div class="rating">★★★★★</div>
   </div>
 
   <div class="tour-item">
     <div class="tour-img-wrapper">
-      <img class="default-img" src="images/Trang chủ/tourcatba.jpg" alt="Tour Hạ Long - Cát Bà">
-      <img class="hover-img" src="images/Trang chủ/tourcatbahover.jpg" alt="Tour Hạ Long - Cát Bà hover">
+      <img class="default-img" src="images/Trang chủ/phu_quoc.jpg" alt="Tour Phú Quốc">
+      <img class="hover-img" src="images/Trang chủ/phu_quoc_hover.jpg" alt="Tour Phú Quốc hover">
     </div>
-    <h3>Tour Hạ Long - Cát Bà 3N2D</h3>
-    <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Hạ Long - Cát Bà - Hà Nội</p>
-    <p class="transport"><i class="fas fa-ship"></i> Phương tiện: Xe + Tàu cao tốc</p>
-    <p class="price">3.800.000đ</p>
+    <h3>Tour Hà Nội - Phú Quốc 4N3Đ</h3>
+    <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Phú Quốc - Vinpearland - Đảo Ngọc - Hà Nội</p>
+    <p class="transport"><i class="fas fa-ship"></i> Phương tiện: Máy bay và xe đưa đón</p>
+    <div class="tour-info">
+      <p class="price">8.500.000đ <s>9.000.000đ</s></p>
+      <a class="book-now-btn" onclick="addToCart('ha-noi-phu-quoc')" href="Chi tiết tour/hanoiphuquoc4n3d.html">Đặt Ngay</a>
+    </div>
     <div class="rating">★★★★★</div>
   </div>
 
@@ -246,10 +315,13 @@
       <img class="default-img" src="images/Trang chủ/tourmuinephanthiet.jpg" alt="Tour Mũi Né - Phan Thiết">
       <img class="hover-img" src="images/Trang chủ/tourmuinephanthiethover.jpg" alt="Tour Mũi Né - Phan Thiết hover">
     </div>
-    <h3>Tour Mũi Né - Phan Thiết 3N2D</h3>
-    <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: TP.HCM - Phan Thiết - Mũi Né - TP.HCM</p>
+    <h3>Tour Tp Hồ Chí Minh - Phan Thiết - Mũi Né 3N2Đ</h3>
+    <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: TP. Hồ Chí Minh - Mũi Né - Suối Tiên - Đồi Cát Bay - Làng Chài Mũi Né - Tháp Chăm Poshanư - Mua đặc sản - Về TP. Hồ Chí Minh</p>
     <p class="transport"><i class="fas fa-bus"></i> Phương tiện: Xe du lịch</p>
-    <p class="price">2.100.000đ</p>
+    <div class="tour-info">
+      <p class="price">3.299.000đ <s>3.799.000đ</s></p>
+      <a class="book-now-btn" onclick="addToCart('tp-ho-chi-minh-phan-thiet-mui-ne')" href="Chi tiết tour/phanthietmuine3n2d.html">Đặt Ngay</a>
+    </div>
     <div class="rating">★★★★★</div>
   </div>
 
@@ -258,118 +330,144 @@
       <img class="default-img" src="images/Trang chủ/thacbangioc.jpg" alt="Thác bản giốc">
       <img class="hover-img" src="images/Trang chủ/suoilenin.jpg" alt="Tour Cao Bằng hover">
     </div>
-    <h3>Tour Hà Nội - Cao Bằng  2N1Đ</h3>
-    <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Cao Bằng</p>
+    <h3>Tour Hà Nội - Cao Bằng 2N1Đ</h3>
+    <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Cao Bằng - Thác Bản Giốc - Pác Bó - Hà Nội</p>
     <p class="transport"><i class="fas fa-bus"></i> Phương tiện: Xe khách du lịch</p>
-    <p class="price">2.199.000đ</p>
+    <div class="tour-info">
+      <p class="price">2.199.000đ <s>2.599.000đ</s></p>
+      <a class="book-now-btn" onclick="addToCart('ha-noi-cao-bang')" href="Chi tiết tour/hanoicaobang2n1d.html">Đặt Ngay</a>
+    </div>
     <div class="rating">★★★★★</div>
   </div>
 
   <div class="tour-item">
     <div class="tour-img-wrapper">
-      <img class="default-img" src="images/Trang chủ/chua.jpg" alt="Tour Bến Tre">
-      <img class="hover-img" src="images/Trang chủ/ninhbinh.jpg " alt="Tour Bến Tre hover">
+      <img class="default-img" src="images/Trang chủ/chua.jpg" alt="Tour Ninh Bình">
+      <img class="hover-img" src="images/Trang chủ/ninhbinh.jpg" alt="Tour Ninh Bình hover">
     </div>
     <h3>Tour Hà Nội - Ninh Bình 3N2Đ</h3>
-    <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình : Hà Nội - Ninh Bình</p>
-    <p class="transport"><i class="fas fa-bus"></i> Phương tiện: Xe du lịch</p>
-    <p class="price">2.790.000đ</p>
-    <div class="rating">★★★★★</div>
-
-  </div>
-
-</div>
-
-<!-- tour hot deal -->
-<section class="slider-container hot-sale-slider">
-  <h3>TOUR SALE HOT DEAL</h3>
-  <div class="auto-slide">
-    <div class="slider">
-
-      <div class="slide">
-        <div class="tour-item">
-          <div class="discount">-14%</div>
-          <img src="images/Trang chủ/moccha.webp" alt="Tour Mộc Châu">
-          <h3>Tour Hà Nội - Mộc Châu 3N2D</h3>
-          <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Mộc Châu - Hà Nội</p>
-          <p class="transport"><i class="fas fa-bus"></i> Phương tiện: Xe du lịch</p>
-          <p class="price">2.599.000đ <s>2.999.000đ</s></p>
-          <div class="rating">★★★★★</div>
-        </div>
-      </div>
-
-      <div class="slide">
-        <div class="tour-item">
-          <div class="discount">-20%</div>
-          <img src="images/Trang chủ/catba.webp" alt="Tour Cát Bà">
-          <h3>Tour Hà Nội - Cát Bà 2N1Đ</h3>
-          <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Cát Bà - Hà Nội</p>
-          <p class="transport"><i class="fas fa-ship"></i> Phương tiện: Xe + Tàu cao tốc</p>
-          <p class="price">2.599.000đ <s>3.099.000đ</s></p>
-          <div class="rating">★★★★★</div>
-        </div>
-      </div>
-
-      <div class="slide">
-        <div class="tour-item">
-          <div class="discount">-15%</div>
-          <img src="images/Trang chủ/sapa.png" alt="Tour Sapa">
-          <h3>Tour Hà Nội - Sapa 3N2D</h3>
-          <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Lào Cai - Sapa - Hà Nội</p>
-          <p class="transport"><i class="fas fa-train"></i> Phương tiện: Tàu + Xe du lịch</p>
-          <p class="price">2.599.000đ <s>2.999.000đ</s></p>
-          <div class="rating">★★★★★</div>
-        </div>
-      </div>
-
-      <div class="slide">
-        <div class="tour-item">
-          <div class="discount">-5%</div>
-          <img src="images/Trang chủ/danang.jpg" alt="Tour Đà Nẵng - Huế - Hội An">
-          <h3>Tour TP Hồ Chí Minh - Đà Nẵng - Huế - Hội An 5N4D</h3>
-          <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: TP.HCM - Đà Nẵng - Huế - Hội An</p>
-          <p class="transport"><i class="fas fa-plane"></i> Phương tiện: Máy bay + Xe du lịch</p>
-          <p class="price">8.199.000đ <s>8.699.000đ</s></p>
-          <div class="rating">★★★★★</div>
-        </div>
-      </div>
-
-      <div class="slide">
-        <div class="tour-item">
-          <div class="discount">-10%</div>
-          <img src="images/Trang chủ/dalat.jpg" alt="Tour Đà Lạt">
-          <h3>Tour TP Hồ Chí Minh - Đà Lạt 3N2Đ</h3>
-          <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: TP.HCM - Đà Lạt - TP.HCM</p>
-          <p class="transport"><i class="fas fa-bus"></i> Phương tiện: Xe du lịch</p>
-          <p class="price">3.899.000đ <s>4.299.000đ</s></p>
-          <div class="rating">★★★★★</div>
-        </div>
-      </div>
-
-      <div class="slide">
-        <div class="tour-item">
-          <div class="discount">-28%</div>
-          <img src="images/Trang chủ/nhatrang.webp" alt="Tour Nha Trang">
-          <h3>Tour Hà Nội - Nha Trang 4N3Đ</h3>
-          <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Nha Trang - Hà Nội</p>
-          <p class="transport"><i class="fas fa-plane"></i> Phương tiện: Máy bay + Xe đưa đón</p>
-          <p class="price">7.389.000đ <s>7.889.000đ</s></p>
-          <div class="rating">★★★★★</div>
-        </div>
-      </div>
-
+    <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình : Hà Nội - Chùa Bái Đính - Hang Múa - Vườn chim Thung Nham - Tam Cốc - Hà Nội</p>
+    <p class="transport"><i class="fas fa-bus"></i> Phương tiện: Xe khách</p>
+    <div class="tour-info">
+      <p class="price">2.799.000đ <s>3.199.000đ</s></p>
+      <a class="book-now-btn" onclick="addToCart('ha-noi-ninh-binh')" href="Chi tiết tour/hanoininhbinh3n2d.html">Đặt Ngay</a>
     </div>
+    <div class="rating">★★★★★</div>
   </div>
-
-  <!-- Các nút điều hướng phải nằm trong cùng .hot-sale-slider -->
-  <button class="nav-button prev" onclick="moveHotSaleSlide(-1)">❮</button>
-  <button class="nav-button next" onclick="moveHotSaleSlide(1)">❯</button>
-</section>
-
 </div>
 
-<!-- tin tức -->
- 
+
+      <!-- tour hot deal -->
+      <section class="slider-container hot-sale-slider">
+        <h3>TOUR SALE HOT DEAL</h3>
+        <div class="auto-slide">
+          <div class="slider">
+            <div class="slide">
+              <div class="tour-item">
+                <div class="discount">-14%</div>
+                <img src="images/Trang chủ/moccha.webp" alt="Tour Mộc Châu">
+                <h3>Tour Hà Nội - Mộc Châu 3N2Đ</h3>
+                <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Mộc Châu - thác Dải Yếm
+                  - Rừng thông Bản Áng - Trang trại bò sữa Mộc Châu - Hà Nội</p>
+                <p class="transport"><i class="fas fa-bus"></i> Phương tiện: Xe du lịch</p>
+                <div class="tour-info">
+                  <p class="price">1.599.000đ <s>2.099.000đ</s></p>
+                  <button class="book-now-btn" onclick="addToCart('ha-noi-moc-chau')">Đặt Ngay</button>
+                </div>
+                <div class="rating">★★★★★</div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="tour-item">
+                <div class="discount">-20%</div>
+                <img src="images/Trang chủ/catba.webp" alt="Tour Cát Bà">
+                <h3>Tour Hà Nội - Cát Bà 2N1Đ</h3>
+                <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Cát Bà - Vịnh Lan Hạ -
+                  Hà Nội</p>
+                <p class="transport"><i class="fas fa-ship"></i> Phương tiện: Xe + Tàu cao tốc</p>
+                <div class="tour-info">
+                  <p class="price">2.599.000đ <s>3.099.000đ</s></p>
+                  <button class="book-now-btn" onclick="addToCart('ha-noi-cat-ba')">Đặt Ngay</button>
+                </div>
+                <div class="rating">★★★★★</div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="tour-item">
+                <div class="discount">-15%</div>
+                <img src="images/Trang chủ/sapa.png" alt="Tour Sapa">
+                <h3>Tour Hà Nội - Sapa 3N2Đ</h3>
+                <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Sapa - Bản Cát Cát -
+                  Đỉnh Fansipan - núi Hàm Rồng - Hà Nội</p>
+                <p class="transport"><i class="fas fa-train"></i> Phương tiện: Tàu + Xe du lịch</p>
+                <div class="tour-info">
+                  <p class="price">2.599.000đ <s>2.999.000đ</s></p>
+                  <button class="book-now-btn" onclick="addToCart('ha-noi-sapa')">Đặt Ngay</button>
+                </div>
+                <div class="rating">★★★★★</div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="tour-item">
+                <div class="discount">-5%</div>
+                <img src="images/Trang chủ/danang.jpg" alt="Tour Đà Nẵng - Huế - Hội An">
+                <h3>Tour TP Hồ Chí Minh - Đà Nẵng - Huế - Hội An 5N4Đ</h3>
+                <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: TP. Hồ Chí Minh - Đà Nẵng - Linh
+                  Ứng Tự - Bảo tàng Đà Nẵng - Hội An - Chùa Cầu - Nhà cổ - Huế - Lăng Khải Định - Đại Nội Triều Nguyễn -
+                  Chùa Thiên Mụ - TP. Hồ Chí Minh</p>
+                <p class="transport"><i class="fas fa-plane"></i> Phương tiện: Máy bay + Xe du lịch</p>
+                <div class="tour-info">
+                  <p class="price">8.199.000đ <s>8.699.000đ</s></p>
+                  <button class="book-now-btn" onclick="addToCart('tp-ho-chi-minh-da-nang-hue-hoi-an')">Đặt
+                    Ngay</button>
+                </div>
+                <div class="rating">★★★★★</div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="tour-item">
+                <div class="discount">-10%</div>
+                <img src="images/Trang chủ/dalat.jpg" alt="Tour Đà Lạt">
+                <h3>Tour TP Hồ Chí Minh - Đà Lạt 3N2Đ</h3>
+                <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: TP. Hồ Chí Minh - Đà Lạt - Dinh
+                  Bảo Đại - Thác Datanla - Núi Langbiang - Ga xe lửa cổ - TP. Hồ Chí Minh</p>
+                <p class="transport"><i class="fas fa-bus"></i> Phương tiện: Xe du lịch</p>
+                <div class="tour-info">
+                  <p class="price">3.899.000đ <s>4.299.000đ</s></p>
+                  <button class="book-now-btn" onclick="addToCart('tp-ho-chi-minh-da-lat')">Đặt Ngay</button>
+                </div>
+                <div class="rating">★★★★★</div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="tour-item">
+                <div class="discount">-28%</div>
+                <img src="images/Trang chủ/nhatrang.webp" alt="Tour Nha Trang">
+                <h3>Tour Hà Nội - Nha Trang 4N3Đ</h3>
+                <p class="itinerary"><i class="fas fa-map-marker-alt"></i> Hành trình: Hà Nội - Nha Trang - Hòn Mun -
+                  Tháp Bà Ponagar - Thủy cung Vinpearl - Chùa Long Sơn - Hà Nội</p>
+                <p class="transport"><i class="fas fa-plane"></i> Phương tiện: Máy bay + Xe đưa đón</p>
+                <div class="tour-info">
+                  <p class="price">7.389.000đ <s>7.889.000đ</s></p>
+                  <button class="book-now-btn" onclick="addToCart('ha-noi-nha-trang')">Đặt Ngay</button>
+                </div>
+                <div class="rating">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Các nút điều hướng phải nằm trong cùng .hot-sale-slider -->
+        <button class="nav-button prev" onclick="moveHotSaleSlide(-1)">❮</button>
+        <button class="nav-button next" onclick="moveHotSaleSlide(1)">❯</button>
+      </section>
+    </div>
+
     <!-- Phần 5: Đánh Giá Khách Hàng -->
     <h3>ĐÁNH GIÁ CỦA KHÁCH HÀNG</h3>
     <div class="review-slider-container">
@@ -459,11 +557,12 @@
       </div>
     </div>
   </div>
-  <!-- nút trở về đầu trang -->
-  <button onclick="scrollToTop()" id="backToTopBtn" title="Về đầu trang">
-    <img class="icon" src="images/Icon&logo/back.png"></button>
-  <!-- Footer-->
 
+  <!-- nút trở về đầu trang -->
+  <button onclick="scrollToTop()" id="backToTopBtn" title="Về đầu trang"><img class="icon"
+      src="images/Icon&logo/back.png"></button>
+
+  <!-- Footer-->
   <footer class="footer">
     <div class="footer-top">
       <h2>VIETWANDER</h2>
@@ -517,8 +616,9 @@
       <p>© 2025 VietWander.com. All rights reserved</p>
     </div>
   </footer>
-  <!-- Javascipt -->
-  <script src="home.js"></script>
+
+  <script src="main.js"></script>
+  <!--Start of Tawk.to Script-->
   <script type="text/javascript">
     var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     (function () {
@@ -531,6 +631,7 @@
     })();
   </script>
   <!--End of Tawk.to Script-->
+
 </body>
 
 </html>
