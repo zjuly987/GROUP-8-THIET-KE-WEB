@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thanh Toán - VIETWANDER</title>
     <link rel="stylesheet" href="thanhtoan.css" />
-    <script src="thanhtoan.js"></script> 
+    <script defer src="thanhtoan.js"></script>
 </head>
+
 <body>
     <header></header>
 
@@ -61,7 +63,7 @@
                 <input type="number" id="children" value="0" min="0" />
             </div>
             <div class="form-group">
-                <label for="infants">Trẻ nhỏ (&lt; 4 tuổi)</label>
+                <label for="infants">Trẻ nhỏ (< 4 tuổi)</label>
                 <input type="number" id="infants" value="0" min="0" />
             </div>
         </section>
@@ -72,29 +74,25 @@
             <ul>
                 <li>
                     <div>
-                        <strong>Tour Đà Lạt 3N2D</strong><br>
-                        <small>15/06/2025 - 17/06/2025 (3 ngày 2 đêm)</small><br>
-                        <span id="base-price">2.990.000đ</span>
+                        <strong>Đang tải tên tour...</strong><br>
+                        <span id="base-price">0đ</span>
                     </div>
                 </li>
                 <li>
                     <div class="tour-slideshow">
-                        <img id="slide-img" src="images/tourdalat1hover.jpg" alt="Ảnh tour" />
-                        <img id="slide-img" src="images/tourdalat2.jpg" alt="Ảnh tour" />
-                        <img id="slide-img" src="images/tourdalat2hover.jpg" alt="Ảnh tour" />
-
+                        <img id="slide-img" src="images/default.jpg" alt="Ảnh tour" />
                         <button class="slide-btn prev" onclick="changeSlide(-1)">&#10094;</button>
                         <button class="slide-btn next" onclick="changeSlide(1)">&#10095;</button>
                     </div>
                 </li>
                 <li><span>Phí dịch vụ</span><span>0đ</span></li>
-                <li class="total"><span>Tiền đặt cọc (10%)</span><span id="total-price">299.000đ</span></li>
+                <li class="total"><span>Tiền đặt cọc (10%)</span><span id="total-price">0đ</span></li>
             </ul>
             <button class="checkout-button">Xác nhận đặt tour</button>
         </section>
     </main>
 
     <footer></footer>
-    <script src="thanhtoan.js"></script>
 </body>
+
 </html>

@@ -217,9 +217,20 @@ function removeFromCart(index) {
   openCartPopup();
 }
 
+// checkout
 function checkout() {
-  alert("Chức năng thanh toán đang được phát triển!");
+  const latestTour = cartData[cartData.length - 1];
+  if (latestTour) {
+    localStorage.setItem("selectedTour", JSON.stringify(latestTour));
+    window.location.href = "thanhtoan.html";
+  } else {
+    alert("Không có tour nào trong giỏ hàng!");
+  }
 }
+
+
+
+
 // thông báo sau khi yêu cầu tư vấn
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".form-container form");
@@ -268,4 +279,14 @@ const image = imageEl ? imageEl.getAttribute("src") : "";
   }
 });
 
-// ngăn chặn cho việc thêm tour 2 lần
+// checkout
+function checkout() {
+  const tour = cartData[cartData.length - 1]; // Lấy tour mới nhất
+  if (tour) {
+    localStorage.setItem("selectedTour", JSON.stringify(tour));
+    window.location.href = "../THANH TOÁN/thanhtoan.html"; // chuyển đến trang thanh toán
+  } else {
+    alert("Không có tour nào trong giỏ hàng!");
+  }
+}
+
