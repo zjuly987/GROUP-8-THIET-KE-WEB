@@ -87,7 +87,15 @@ function handleAddCurrentTourToCart() {
   const imageEl = document.querySelector(".slide img") || document.querySelector(".intro img");
   const image = imageEl ? imageEl.getAttribute("src") : "";
 
-  const tour = { name, price, image };
+const tour = {
+  name,
+  price,
+  image,
+  description
+};
+document.getElementById("tour-description").textContent = tour.description;
+const description = document.querySelector(".loi-dan")?.innerText || "";
+
 
   cartData.push(tour);
   localStorage.setItem("cartData", JSON.stringify(cartData));
@@ -99,18 +107,19 @@ function checkout() {
   const latestTour = cartData[cartData.length - 1];
   if (latestTour) {
     localStorage.setItem("selectedTour", JSON.stringify(latestTour));
-    window.location.href = "thanhtoan.html";
+    window.location.href = "../Danh mục/thanhtoan.html";
   } else {
     alert("Không có tour nào trong giỏ hàng!");
   }
 }
+
 
 // Tự động gắn sự kiện sau khi trang load
 document.addEventListener("DOMContentLoaded", () => {
   // Gắn nút thêm vào giỏ hàng (nếu có)
   const addToCartBtn = document.querySelector(".add-to-cart button");
   if (addToCartBtn) {
-    addToCartBtn.addEventListener("click", handleAddCurrentTourToCart);
+    addToCartBtn.addEvfentListener("click", handleAddCurrentTourToCart);
   }
 
   // Gắn nút mở giỏ hàng nếu có
