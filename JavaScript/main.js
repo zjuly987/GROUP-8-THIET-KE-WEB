@@ -25,7 +25,7 @@ window.addEventListener('scroll', function () {
 // JS padding cho nội dung không bị header che
 function updateMainPadding() {
   const header = document.querySelector("header");
-  const main = document.querySelector(".underbanner-slideshow");
+  const main = document.querySelector(".intro-container");
   if (header && main) {
     main.style.paddingTop = header.offsetHeight + "px";
   }
@@ -86,11 +86,10 @@ document.addEventListener('click', function(e) {
   }
 });
 
-// Slide banner
+//chạy slide dưới banner
 let underbannerIndex = 0;
 let underbannerSlides = document.getElementsByClassName("underbanner-slide");
 let underbannerTimer;
-
 function showUnderbannerSlides() {
   for (let i = 0; i < underbannerSlides.length; i++) {
     underbannerSlides[i].classList.remove("active");
@@ -100,14 +99,12 @@ function showUnderbannerSlides() {
   underbannerSlides[underbannerIndex - 1].classList.add("active");
   underbannerTimer = setTimeout(showUnderbannerSlides, 4000);
 }
-
 function plusUnderbannerSlides(n) {
   clearTimeout(underbannerTimer);
   underbannerIndex += n - 1;
   if (underbannerIndex < 0) underbannerIndex = underbannerSlides.length - 1;
   showUnderbannerSlides();
 }
-
 window.onload = showUnderbannerSlides;
 
 // Reveal review items hiệu ứng hiện dần
