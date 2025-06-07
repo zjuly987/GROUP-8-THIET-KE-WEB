@@ -623,3 +623,307 @@ height: 30px;
   margin: 5px 0;
   font-size: 15px;
 }
+/* Respnsive cho các thiết bị */
+/* Màn hình trung bình (768px–1200px) */
+@media (max-width: 1200px) {
+  /* Điều chỉnh padding cho header */
+  header {
+    padding: 5px 50px;
+  }
+
+  /* Điều chỉnh logo và tiêu đề */
+  .logo-container img {
+    width: 50px;
+    height: 36px;
+  }
+  .logo-container h1 {
+    font-size: 24px;
+  }
+
+  /* Điều chỉnh thanh điều hướng */
+  .main-nav ul {
+    gap: 20px;
+  }
+  .main-nav ul li {
+    padding-left: 3px;
+  }
+  .search-container input {
+    width: 180px;
+    font-size: 14px;
+  }
+  .search-container button {
+    width: 35px;
+    height: 35px;
+    padding: 8px;
+  }
+
+  /* Điều chỉnh bố cục nội dung */
+  .content {
+    margin: 20px 50px;
+  }
+  .main {
+    padding-right: 15px;
+  }
+  .sidebar {
+    padding-left: 15px;
+  }
+
+  /* Điều chỉnh tags wrapper */
+  .tags-wrapper {
+    gap: 60px;
+    padding: 20px;
+  }
+  .tag-item a {
+    margin: 0 20px;
+    font-size: 18px;
+  }
+
+  /* Điều chỉnh lưới tour */
+  .tour-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  #more-tours {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  /* Điều chỉnh footer */
+  .footer {
+    padding: 10px 30px;
+  }
+  .footer-column {
+    margin-right: 20px;
+  }
+}
+
+/* Màn hình nhỏ (dưới 768px, mở rộng media query hiện có) */
+@media (max-width: 768px) {
+  /* Điều chỉnh header */
+  header {
+    padding: 5px 20px;
+  }
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .logo-container {
+    margin-bottom: 10px;
+  }
+  .logo-container img {
+    width: 40px;
+    height: 29px;
+  }
+  .logo-container h1 {
+    font-size: 20px;
+  }
+  .login-out {
+    gap: 15px;
+  }
+  .login-out a {
+    font-size: 14px;
+  }
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  /* Điều chỉnh thanh điều hướng */
+  .main-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .main-nav ul li {
+    padding-left: 0;
+  }
+  .has-dropdown .dropdown {
+    position: static;
+    border: none;
+    background-color: #f9f9f9;
+    min-width: 100%;
+  }
+  .search-container {
+    width: 100%;
+  }
+  .search-container input {
+    width: 100%;
+    font-size: 14px;
+  }
+  .search-container button {
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+  }
+
+  /* Caption và tags */
+  .caption {
+    padding-top: 150px;
+    font-size: 20px;
+  }
+  .tags-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+  }
+  .tag-item a {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  /* Bố cục nội dung */
+  .content {
+    flex-direction: column;
+    margin: 20px 20px;
+  }
+  .main {
+    padding-right: 0;
+  }
+  .sidebar {
+    border-left: none;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  /* Lưới tour */
+  .tour-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .tour-item {
+    min-height: 350px;
+  }
+  .tour-item img {
+    height: 180px;
+  }
+  #more-tours {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  #more-tours .tour-item {
+    min-height: 300px;
+  }
+  #more-tours .tour-item img {
+    height: 120px;
+  }
+
+  /* Phần xem nhiều */
+  .most-viewed-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .view-item {
+    max-width: 100%;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 10px 20px;
+  }
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-main {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer-column {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .payment-icons img {
+    height: 30px;
+    margin-right: 15px;
+  }
+}
+
+/* Màn hình rất nhỏ (dưới 480px) */
+@media (max-width: 480px) {
+  /* Header */
+  header {
+    padding: 5px 10px;
+  }
+  .logo-container h1 {
+    font-size: 18px;
+  }
+  .login-out {
+    gap: 10px;
+  }
+  .login-out a {
+    font-size: 12px;
+  }
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Thanh điều hướng */
+  .main-nav {
+    font-size: 14px;
+  }
+  .main-nav ul {
+    gap: 10px;
+  }
+  .search-container input {
+    font-size: 12px;
+  }
+
+  /* Caption và tags */
+  .caption {
+    font-size: 18px;
+  }
+  .tag-item a {
+    font-size: 14px;
+  }
+
+  /* Nội dung */
+  .content {
+    margin: 10px;
+  }
+  .text-box h3 {
+    font-size: 20px;
+  }
+  .text-box {
+    font-size: 16px;
+  }
+  .sidebar-title {
+    font-size: 20px;
+  }
+  .sidebar-item p {
+    font-size: 14px;
+  }
+
+  /* Lưới tour */
+  .tour-item h3 {
+    font-size: 16px;
+  }
+  .tour-item .itinerary {
+    font-size: 14px;
+  }
+  .tour-item .price {
+    font-size: 16px;
+  }
+  .tour-item button {
+    padding: 8px 30px;
+    font-size: 14px;
+  }
+
+  /* Footer */
+  .footer-top h2 {
+    font-size: 20px;
+  }
+  .hotline {
+    padding: 4px 10px;
+    font-size: 14px;
+  }
+  .footer-column p {
+    font-size: 14px;
+  }
+  .footer-bottom p {
+    font-size: 12px;
+  }
+}
