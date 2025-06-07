@@ -86,10 +86,11 @@ document.addEventListener('click', function(e) {
   }
 });
 
-//chạy slide dưới banner
+// Slide banner
 let underbannerIndex = 0;
 let underbannerSlides = document.getElementsByClassName("underbanner-slide");
 let underbannerTimer;
+
 function showUnderbannerSlides() {
   for (let i = 0; i < underbannerSlides.length; i++) {
     underbannerSlides[i].classList.remove("active");
@@ -99,12 +100,14 @@ function showUnderbannerSlides() {
   underbannerSlides[underbannerIndex - 1].classList.add("active");
   underbannerTimer = setTimeout(showUnderbannerSlides, 4000);
 }
+
 function plusUnderbannerSlides(n) {
   clearTimeout(underbannerTimer);
   underbannerIndex += n - 1;
   if (underbannerIndex < 0) underbannerIndex = underbannerSlides.length - 1;
   showUnderbannerSlides();
 }
+
 window.onload = showUnderbannerSlides;
 
 // Reveal review items hiệu ứng hiện dần
