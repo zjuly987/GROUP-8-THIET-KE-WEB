@@ -7,6 +7,7 @@
   <title>Trang chủ - VIETWANDER</title>
   <link rel="icon" type="image/png" href="images/IconAndLogo/logo-img.png" class="icon">
   <link rel="stylesheet" href="CSS/main.css">
+  <script src="JavaScript/cart.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -42,13 +43,8 @@
         </li>
         <li><a href="Danh mục/tintuc.html">TIN TỨC</a></li>
         <li><a href="Danh mục/contact.html">LIÊN HỆ</a></li>
-        <li class="cart-item">
-          <a href="#" id="cartLink"><i class="fa-solid fa-bag-shopping"></i> GIỎ HÀNG</a>
-          <div id="cartDropdown" class="cart-dropdown" style="display: none;">
-            <div id="cartItems"></div>
-            <button id="viewCart">Xem giỏ hàng</button>
-            <button id="checkout"><a href="../Thanh Toán/thanhtoan.html"></a>Thanh toán</button>
-          </div>
+        <li>
+            <a href="#" onclick="openCartPopup()"><i class="fa-solid fa-bag-shopping"></i> GIỎ HÀNG</a>
         </li>
       </ul>
       <div class="search-container">
