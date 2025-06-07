@@ -25,7 +25,7 @@ window.addEventListener('scroll', function () {
 // JS padding cho nội dung không bị header che
 function updateMainPadding() {
   const header = document.querySelector("header");
-  const main = document.querySelector(".intro-container");
+  const main = document.querySelector(".underbanner-slideshow");
   if (header && main) {
     main.style.paddingTop = header.offsetHeight + "px";
   }
