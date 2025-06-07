@@ -58,7 +58,7 @@ function handleSignInForm() {
         const isLoginSuccess = true; // Giả lập
         if (isLoginSuccess) {
             alert('Đăng nhập thành công!');
-         window.location.href = 'Trang%chủ/trangchu.html';
+         window.location.href = '../index.html';
         } else {
             alert('Thông tin đăng nhập không đúng. Vui lòng thử lại.');
         }
