@@ -191,3 +191,26 @@ body {
   margin-left: 5px;
 }
 
+/* response */
+@media (max-width: 480px) {
+  .checkout-button {
+    font-size: 15px;
+    padding: 10px;
+  }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 8px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .checkout-container {
+    gap: 30px;
+  }
+  .checkout-form h2,
+  .booking-details h2,
+  .order-summary h2 {
+    font-size: 28px;
+  }
+}
