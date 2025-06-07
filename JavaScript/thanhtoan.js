@@ -27,6 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".order-summary strong").textContent = tour.name || "Tour không xác định";
     document.getElementById("slide-img").src = tour.image || "images/default.jpg";
     document.getElementById("base-price").textContent = tour.price.toLocaleString('vi-VN') + "đ";
+    if (tour.description) {
+  document.getElementById("tour-description").textContent = tour.description;
+}
+
     basePrice = tour.price;
     calculateDeposit();
   }

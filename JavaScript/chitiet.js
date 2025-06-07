@@ -249,19 +249,23 @@ document.addEventListener("DOMContentLoaded", () => {
     addToCartBtn.addEventListener("click", () => {
       // Tự động lấy tên tour
       const name = document.querySelector(".intro h2")?.innerText.trim() || "Tour không rõ tên";
-
-      // Lấy giá từ span.highlight (VD: 5.499.000 ĐỒNG)
+      // Lấy giá từ span.highlight
       const priceText = document.querySelector(".highlight")?.innerText || "0";
       const price = parseInt(priceText.replace(/[^\d]/g, '')) || 0;
-
       // Lấy ảnh từ slide đầu tiên hoặc ảnh đầu intro
       const imageEl = document.querySelector(".slide img") || document.querySelector(".intro img");
-const image = imageEl ? imageEl.getAttribute("src") : "";
+      const image = imageEl ? imageEl.getAttribute("src") : "";
+      
+// 👉 Lấy thêm thời gian và phương tiện
+      const duration = document.querySelector(".thoi-gian")?.innerText.replace("Thời gian:", "").trim() || "";
+      const transport = document.querySelector(".phuong-tien")?.innerText.replace("Phương tiện:", "").trim() || "";
 
       const tour = {
         name,
         price,
-        image
+        image,
+        duration,
+        transport
       };
 
       cartData.push(tour);
@@ -281,12 +285,13 @@ const image = imageEl ? imageEl.getAttribute("src") : "";
 
 // checkout
 function checkout() {
-  const tour = cartData[cartData.length - 1]; // Lấy tour mới nhất
-  if (tour) {
-    localStorage.setItem("selectedTour", JSON.stringify(tour));
-    window.location.href = "../THANH TOÁN/thanhtoan.html"; // chuyển đến trang thanh toán
+  const latestTour = cartData[cartData.length - 1];
+  if (latestTour) {
+    localStorage.setItem("selectedTour", JSON.stringify(latestTour));
+    window.location.href = "../Danh mục/thanhtoan.html"; 
   } else {
     alert("Không có tour nào trong giỏ hàng!");
   }
 }
+
 
