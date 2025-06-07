@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tour Đà Nẵng - Quảng Nam - VIETWANDER</title>
-  <link rel="stylesheet" href="chitiet.css">
-  <script src="chitiet.js"></script>
+  <link rel="stylesheet" href="../CSS/chitiet.css">
+  <script src="../JavaScript/chitiet.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
   <header>
     <!--banner-->
     <div class="header-top">
       <div class="logo-container">
         <a href="trangchu.html">
-          <img src="images/Icon&logo/logo-img.png" alt="Logo">
+          <img src="../images/IconAndLogo/logo-img.png" alt="Logo">
         </a>
         <h1>VIETWANDER</h1>
       </div>
       <div class="login-out">
-        <a href="login.html"><img class="icon" src="images/Icon&logo/đăng nhập.png">Đăng nhập</a>
-        <a href="register.html"><img class="icon" src="images/Icon&logo/đăng ký.png">Đăng ký</a>
+        <a href="../Danh mục/signup.html"><img class="icon" src="../images/IconAndLogo/đăng nhập.png">Đăng nhập</a>
+        <a href="../Danh mục/signin.html"><img class="icon" src="../images/IconAndLogo/đăng ký.png">Đăng ký</a>
       </div>
     </div>
-
     <!--nav-->
     <nav class="main-nav">
       <ul>
-        <li><a href="../Trang chủ/Trang chủ.html">TRANG CHỦ</a></li>
-        <li><a href="../Giới thiệu/Giới thiệu.html">GIỚI THIỆU</a></li>
+        <li><a href="../index.html">TRANG CHỦ</a></li>
+        <li><a href="../Danh mục/gioithieu.html">GIỚI THIỆU</a></li>
         <li class="has-dropdown">
           <a href="#">DANH MỤC TOUR <i class="fa fa-chevron-down"></i></a>
           <ul class="dropdown">
-            <li><a href="#">Tour miền Bắc</a></li>
-            <li><a href="#">Tour miền Trung</a></li>
-            <li><a href="#">Tour miền Nam</a></li>
+            <li><a href="../Danh mục/danhmuctourmienbac.html">Tour miền Bắc</a></li>
+            <li><a href="../Danh mục/danhmuctourmientrung.html">Tour miền Trung</a></li>
+            <li><a href="../Danh mục/danhmuctourmiennam.html">Tour miền Nam</a></li>
           </ul>
         </li>
-        <li><a href="../Trang tin tức/Tin tức.html">TIN TỨC</a></li>
-        <li><a href="#">LIÊN HỆ</a></li>
+        <li><a href="../Danh mục/tintuc.html">TIN TỨC</a></li>
+        <li><a href="../Danh mục/contact.html">LIÊN HỆ</a></li>
         <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i> GIỎ HÀNG</a></li>
       </ul>
       <div class="search-container">
@@ -51,19 +48,19 @@
   </header>
 
   <!--phần giới thiệu mở đầu-->
-<div class="intro-container">
+  <div class="intro-container">
     <div class="slideshow-container">
       <div class="slide fade">
-        <img src="images/Đà Nẵng - Quảng Nam/cau_rong.jpg" alt="Ảnh 1">
+        <img src="../images/Đà Nẵng - Quảng Nam/cau_rong.jpg" alt="Ảnh 1">
       </div>
       <div class="slide fade">
-        <img src="images/Đà Nẵng - Quảng Nam/hoi_an.jpg" alt="Ảnh 2">
+        <img src="../images/Đà Nẵng - Quảng Nam/hoi_an.jpg" alt="Ảnh 2">
       </div>
       <div class="slide fade">
-        <img src="images/Đà Nẵng - Quảng Nam/ba_na_hills.jpg" alt="Ảnh 3">
+        <img src="../images/Đà Nẵng - Quảng Nam/ba_na_hills.jpg" alt="Ảnh 3">
       </div>
       <div class="slide fade">
-        <img src="images/Đà Nẵng - Quảng Nam/my_son.jpg" alt="Ảnh 4">
+        <img src="../images/Đà Nẵng - Quảng Nam/my_son.jpg" alt="Ảnh 4">
       </div>
       <a class="prev" onclick="changeSlide(-1)">❮</a>
       <a class="next" onclick="changeSlide(1)">❯</a>
@@ -71,10 +68,18 @@
     <div class="intro">
       <h2>Tour Đà Nẵng - Quảng Nam<br>Khám phá vẻ đẹp biển cả và di sản miền Trung</h2>
       <div class="intro-infor">
-        <p class="hanh-trinh"><img class="icon" src="images/Icon&logo/address-1@2x.png" alt="">Đà Nẵng - Quảng Nam</p>
-        <p class="thoi-gian"><img class="icon" src="images/Icon&logo/icon thời gian.png" alt="">Thời gian: 3 ngày 2 đêm</p>
-        <p class="phuong-tien"><img class="icon" src="images/Icon&logo/icon phương tiện.png" alt="">Phương tiện: Xe khách</p>
-        <p class="khoi-hanh"><img class="icon" src="images/Icon&logo/icon khởi hành.png" alt="">Khởi hành: Theo yêu cầu</p>
+        <p class="hanh-trinh">
+          <img class="icon" src="../images/IconAndLogo/address-1@2x.png" alt="">Đà Nẵng - Quảng Nam
+        </p>
+        <p class="thoi-gian">
+          <img class="icon" src="../images/IconAndLogo/icon thời gian.png" alt="">Thời gian: 3 ngày 2 đêm
+        </p>
+        <p class="phuong-tien">
+          <img class="icon" src="../images/IconAndLogo/icon phương tiện.png" alt="">Phương tiện: Xe khách
+        </p>
+        <p class="khoi-hanh">
+          <img class="icon" src="../images/IconAndLogo/icon khởi hành.png" alt="">Khởi hành: Theo yêu cầu
+        </p>
       </div>
       <div class="price-container">
         <div class="add-to-cart">
@@ -87,24 +92,30 @@
           <p class="old-price">Giá gốc: <del>6.199.000 Đồng</del></p>
         </div>
       </div>
-      <p class="loi-dan"><b>Đà Nẵng - Quảng Nam, vùng đất nổi tiếng với bãi biển Mỹ Khê, phố cổ Hội An, và thánh địa Mỹ Sơn. Trong bài viết này, Vietwander sẽ cùng bạn khám phá lịch trình chi tiết tour du lịch Đà Nẵng - Quảng Nam 3 ngày 2 đêm cho chuyến đi sắp tới nhé!</b></p>
+      <p class="loi-dan">
+        <b>Đà Nẵng - Quảng Nam, vùng đất nổi tiếng với bãi biển Mỹ Khê, phố cổ Hội An, và thánh địa Mỹ Sơn. Trong bài
+          viết này, Vietwander sẽ cùng bạn khám phá lịch trình chi tiết tour du lịch Đà Nẵng - Quảng Nam 3 ngày 2 đêm
+          cho chuyến đi sắp tới nhé!</b>
+      </p>
     </div>
   </div>
 
   <!--giới thiệu chung và lịch trình ngắn gọn-->
-<div class="gioithieu-lichtrinh">
+  <div class="gioithieu-lichtrinh">
     <div class="gioithieuchung"
-      style="background-image: url('images/Đà Nẵng - Quảng Nam/img_duoi_gioi_thieu_chung1.jpg'); background-size: cover; background-repeat: no-repeat;">
+      style="background-image: url('../images/Đà Nẵng - Quảng Nam/img_duoi_gioi_thieu_chung1.jpg'); background-size: cover; background-repeat: no-repeat;">
       <div class="text-background">
         <h2>Giới thiệu về Đà Nẵng - Quảng Nam</h2>
         <h3>Đà Nẵng - Quảng Nam - Vùng đất di sản và biển cả miền Trung</h3>
-        <p>Nằm ở trung tâm Việt Nam, Đà Nẵng và Quảng Nam nổi tiếng với vẻ đẹp hiện đại xen lẫn di sản văn hóa lâu đời. 
-          Đà Nẵng thu hút bởi bãi biển Mỹ Khê, Cầu Rồng và Bà Nà Hills, trong khi Quảng Nam nổi bật với phố cổ Hội An và thánh địa Mỹ Sơn - di sản thế giới UNESCO. 
-          Vùng đất này còn hấp dẫn du khách bởi ẩm thực phong phú như mì Quảng, cao lầu và không khí thân thiện, sôi động.</p>
+        <p>Nằm ở trung tâm Việt Nam, Đà Nẵng và Quảng Nam nổi tiếng với vẻ đẹp hiện đại xen lẫn di sản văn hóa lâu đời.
+          Đà Nẵng thu hút bởi bãi biển Mỹ Khê, Cầu Rồng và Bà Nà Hills, trong khi Quảng Nam nổi bật với phố cổ Hội An và
+          thánh địa Mỹ Sơn - di sản thế giới UNESCO.
+          Vùng đất này còn hấp dẫn du khách bởi ẩm thực phong phú như mì Quảng, cao lầu và không khí thân thiện, sôi
+          động.</p>
       </div>
     </div>
     <div class="lichtrinh"
-      style="background-image: url('images/Đà Nẵng - Quảng Nam/img_duoi_gioi_lich_trinh_tour.jpg'); background-size: cover; background-repeat: no-repeat;">
+      style="background-image: url('../images/Đà Nẵng - Quảng Nam/img_duoi_gioi_lich_trinh_tour.jpg'); background-size: cover; background-repeat: no-repeat;">
       <div class="text-background">
         <h2>Lịch trình tour du lịch Đà Nẵng - Quảng Nam 3N2Đ</h2>
         <p>Ngày 1: Đón khách tại Đà Nẵng, tham quan Ngũ Hành Sơn, tắm biển Mỹ Khê, dạo Cầu Rồng về đêm.</p>
@@ -114,15 +125,18 @@
     </div>
   </div>
 
+
   <!--lịch trình chi tiết tour-->
   <div class="detail">
-    <h2>Lịch trình chi tiết tour du lịch Ninh Bình 3 ngày 2 đêm</h2>
-<!-- Ngày 1 -->
+    <h2>Lịch trình chi tiết tour du lịch Đà Nẵng - Quảng Nam 3 ngày 2 đêm</h2> <!-- sửa tên Ninh Bình -->
+
+    <!-- Ngày 1 -->
     <div class="day-section">
       <div class="day-box blue-box">
         <h3>Ngày 1: Đà Nẵng - Ngũ Hành Sơn - Biển Mỹ Khê</h3>
         <ul><strong><i class="fa-solid fa-sun"></i> Buổi sáng:</strong><br>
-          <li>Xe và hướng dẫn viên đón quý khách tại sân bay hoặc điểm hẹn ở Đà Nẵng, khởi hành Tour Đà Nẵng - Quảng Nam 3 ngày 2 đêm.</li>
+          <li>Xe và hướng dẫn viên đón quý khách tại sân bay hoặc điểm hẹn ở Đà Nẵng, khởi hành Tour Đà Nẵng - Quảng Nam
+            3 ngày 2 đêm.</li>
           <li>Ăn sáng với đặc sản địa phương như mì Quảng hoặc bánh tráng cuốn thịt heo.</li>
         </ul>
         <ul><strong><i class="fa-solid fa-city"></i> Buổi trưa:</strong><br>
@@ -132,7 +146,8 @@
         <ul><strong><i class="fa-solid fa-umbrella-beach"></i> Buổi chiều:</strong><br>
           <li>Tham quan Ngũ Hành Sơn, khám phá các hang động, chùa chiền và làng đá mỹ nghệ Non Nước.</li>
           <li>Quý khách tự do tắm biển Mỹ Khê - một trong những bãi biển đẹp nhất hành tinh.</li>
-          <li>Tham gia chương trình giao lưu văn hóa địa phương với các hoạt động như làm đèn lồng hoặc học nấu món ăn Đà Nẵng.</li>
+          <li>Tham gia chương trình giao lưu văn hóa địa phương với các hoạt động như làm đèn lồng hoặc học nấu món ăn
+            Đà Nẵng.</li>
           <li>Chụp ảnh, thư giãn bên bãi biển Mỹ Khê.</li>
         </ul>
         <ul><strong><i class="fa-solid fa-utensils"></i> Buổi tối:</strong><br>
@@ -140,108 +155,120 @@
           <li>Tự do dạo Cầu Rồng hoặc khám phá chợ đêm Sơn Trà. Nghỉ đêm tại khách sạn.</li>
         </ul>
       </div>
+
       <div class="image-grid">
         <div class="image-item">
-          <img src="images/Đà Nẵng - Quảng Nam/ngu_hanh_son.jpg" alt="Ngũ Hành Sơn">
+          <img src="../images/Đà Nẵng - Quảng Nam/ngu_hanh_son.jpg" alt="Ngũ Hành Sơn">
           <div class="caption">Ngũ Hành Sơn</div>
         </div>
         <div class="image-item">
-          <img src="images/Đà Nẵng - Quảng Nam/my_khe.jpg" alt="Biển Mỹ Khê">
+          <img src="../images/Đà Nẵng - Quảng Nam/my_khe.jpg" alt="Biển Mỹ Khê">
           <div class="caption">Biển Mỹ Khê</div>
         </div>
         <div class="image-item">
-          <img src="images/Đà Nẵng - Quảng Nam/mi_quang.jpg" alt="Mì Quảng">
+          <img src="../images/Đà Nẵng - Quảng Nam/mi_quang.jpg" alt="Mì Quảng">
           <div class="caption">Mì Quảng Đà Nẵng</div>
         </div>
         <div class="image-item">
-          <img src="images/Đà Nẵng - Quảng Nam/cau_rong.jpg" alt="Cầu Rồng">
+          <img src="../images/Đà Nẵng - Quảng Nam/cau_rong.jpg" alt="Cầu Rồng">
           <div class="caption">Cầu Rồng về đêm</div>
         </div>
       </div>
     </div>
+  </div>
 
-<!-- Ngày 2 -->
-    <div class="day-section">
-      <div class="image-grid">
-        <div class="image-item">
-          <img src="images/Đà Nẵng - Quảng Nam/ba_na_hills1.jpg" alt="Bà Nà Hills">
-          <div class="caption">Bà Nà Hills</div>
-        </div>
-        <div class="image-item">
-          <img src="images/Đà Nẵng - Quảng Nam/hoi_an1.webp" alt="Phố cổ Hội An">
-          <div class="caption">Phố cổ Hội An</div>
-        </div>
-        <div class="image-item">
-          <img src="images/Đà Nẵng - Quảng Nam/mi_quang1.jpg" alt="Mì Quảng">
-          <div class="caption">Mì Quảng - đặc sản miền Trung</div>
-        </div>
-        <div class="image-item">
-          <img src="images/Đà Nẵng - Quảng Nam/cao_lau.jpg" alt="Cao lầu">
-          <div class="caption">Cao lầu - đặc sản Hội An</div>
-        </div>
+  <!-- Ngày 2 -->
+  <div class="day-section">
+    <div class="image-grid">
+      <div class="image-item">
+        <img src="../images/Đà Nẵng - Quảng Nam/ba_na_hills1.jpg" alt="Bà Nà Hills">
+        <div class="caption">Bà Nà Hills</div>
       </div>
-      <div class="day-box blue-box">
-        <h3>Ngày 2: Bà Nà Hills - Phố cổ Hội An</h3>
-        <ul><strong><i class="fa-solid fa-landmark"></i> Buổi sáng:</strong><br>
-          <li>Ăn sáng tại khách sạn.</li>
-          <li>Tham quan Bà Nà Hills, khu du lịch nổi tiếng với khí hậu mát mẻ và kiến trúc kiểu Pháp độc đáo.</li>
-          <li>Khám phá Cầu Vàng, Làng Pháp, và vườn hoa Le Jardin D’Amour.</li>
-        </ul>
-        <ul><strong><i class="fa-solid fa-cookie-bite"></i> Buổi trưa:</strong><br>
-          <li>Thưởng thức các món đặc sản miền Trung như mì Quảng, bánh bèo tại nhà hàng trên Bà Nà Hills.</li>
-        </ul>
-        <ul><strong><i class="fa-solid fa-person-hiking"></i> Buổi chiều:</strong><br>
-          <li>Di chuyển đến phố cổ Hội An, tham quan Chùa Cầu, nhà cổ Tấn Ký, và hội quán Phúc Kiến.</li>
-          <li>Trải nghiệm làm đèn lồng truyền thống hoặc dạo thuyền trên sông Hoài.</li>
-          <li>Tham gia chương trình "Gala Dinner" sôi động với các món ăn đặc sản Quảng Nam như cao lầu, cơm gà, được chuẩn bị công phu bởi các đầu bếp chuyên nghiệp, mang đến trải nghiệm ẩm thực难忘.</li>
-        </ul>
-        <ul><strong><i class="fa-solid fa-sailboat"></i> Buổi tối:</strong><br>
-          <li>Ăn tối nhẹ nhàng.</li>
-          <li>Dạo phố cổ Hội An, ngắm cảnh đêm lung linh với đèn lồng rực rỡ.</li>
-        </ul>
+      <div class="image-item">
+        <img src="../images/Đà Nẵng - Quảng Nam/hoi_an1.webp" alt="Phố cổ Hội An">
+        <div class="caption">Phố cổ Hội An</div>
+      </div>
+      <div class="image-item">
+        <img src="../images/Đà Nẵng - Quảng Nam/mi_quang1.jpg" alt="Mì Quảng">
+        <div class="caption">Mì Quảng - đặc sản miền Trung</div>
+      </div>
+      <div class="image-item">
+        <img src="../images/Đà Nẵng - Quảng Nam/cao_lau.jpg" alt="Cao lầu">
+        <div class="caption">Cao lầu - đặc sản Hội An</div>
       </div>
     </div>
 
-    <!-- Ngày 3 -->
-<!-- Ngày 3 -->
-    <div class="day-section">
-      <div class="day-box blue-box">
-        <h3>Ngày 3: Thánh địa Mỹ Sơn - Mua đặc sản - Kết thúc tour</h3>
-        <ul><strong><i class="fa-solid fa-sun-plant-wilt"></i> Buổi sáng:</strong><br>
-          <li>Quý khách ăn sáng tại nhà hàng của khách sạn và tận hưởng những giây phút thư giãn cuối cùng tại Đà Nẵng.</li>
-          <li>Sau bữa sáng, đoàn tham quan Thánh địa Mỹ Sơn - di sản văn hóa thế giới UNESCO, khám phá các đền tháp Chăm Pa cổ kính.</li>
-          <li>Quý khách tự do mua sắm đặc sản tại chợ địa phương như bánh tráng nướng, mì Quảng khô, nước mắm Nam Ô để làm quà cho người thân và bạn bè.</li>
-        </ul>
-        <ul><strong><i class="fa-solid fa-cookie"></i> Buổi trưa:</strong><br>
-          <li>Quý khách dùng bữa trưa tại nhà hàng với thực đơn nhẹ nhàng nhưng đầy đủ dinh dưỡng, thưởng thức đặc sản cao lầu.</li>
-          <li>Sau bữa trưa, đoàn làm thủ tục trả phòng khách sạn và chuẩn bị kết thúc tour.</li>
-          <li>Trên hành trình về trung tâm Đà Nẵng, xe dừng chân tại làng đá mỹ nghệ Non Nước để quý khách mua thêm đặc sản địa phương như đồ thủ công mỹ nghệ, bánh khô mè...</li>
-        </ul>
-        <ul><strong><i class="fa-solid fa-van-shuttle"></i> Buổi chiều:</strong><br>
-          <li>Đoàn trở về trung tâm Đà Nẵng, nghỉ ngơi và thư giãn trên xe.</li>
-          <li>Hướng dẫn viên tổ chức các hoạt động hoạt náo, kể chuyện vui hoặc giao lưu văn nghệ nhẹ nhàng giúp chuyến đi trở nên thú vị hơn.</li>
-          <li>Dự kiến đến trung tâm Đà Nẵng lúc 15h00, kết thúc chuyến đi.</li>
-        </ul>
+    <div class="day-box blue-box">
+      <h3>Ngày 2: Bà Nà Hills - Phố cổ Hội An</h3>
+      <ul><strong><i class="fa-solid fa-landmark"></i> Buổi sáng:</strong><br>
+        <li>Ăn sáng tại khách sạn.</li>
+        <li>Tham quan Bà Nà Hills, khu du lịch nổi tiếng với khí hậu mát mẻ và kiến trúc kiểu Pháp độc đáo.</li>
+        <li>Khám phá Cầu Vàng, Làng Pháp, và vườn hoa Le Jardin D’Amour.</li>
+      </ul>
+      <ul><strong><i class="fa-solid fa-cookie-bite"></i> Buổi trưa:</strong><br>
+        <li>Thưởng thức các món đặc sản miền Trung như mì Quảng, bánh bèo tại nhà hàng trên Bà Nà Hills.</li>
+      </ul>
+      <ul><strong><i class="fa-solid fa-person-hiking"></i> Buổi chiều:</strong><br>
+        <li>Di chuyển đến phố cổ Hội An, tham quan Chùa Cầu, nhà cổ Tấn Ký, và hội quán Phúc Kiến.</li>
+        <li>Trải nghiệm làm đèn lồng truyền thống hoặc dạo thuyền trên sông Hoài.</li>
+        <li>Tham gia chương trình "Gala Dinner" sôi động với các món ăn đặc sản Quảng Nam như cao lầu, cơm gà, được
+          chuẩn bị công phu bởi các đầu bếp chuyên nghiệp, mang đến trải nghiệm ẩm thực khó quên.</li>
+      </ul>
+      <ul><strong><i class="fa-solid fa-sailboat"></i> Buổi tối:</strong><br>
+        <li>Ăn tối nhẹ nhàng.</li>
+        <li>Dạo phố cổ Hội An, ngắm cảnh đêm lung linh với đèn lồng rực rỡ.</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- Ngày 3 -->
+  <div class="day-section">
+    <div class="day-box blue-box">
+      <h3>Ngày 3: Thánh địa Mỹ Sơn - Mua đặc sản - Kết thúc tour</h3>
+      <ul><strong><i class="fa-solid fa-sun-plant-wilt"></i> Buổi sáng:</strong><br>
+        <li>Quý khách ăn sáng tại nhà hàng của khách sạn và tận hưởng những giây phút thư giãn cuối cùng tại Đà Nẵng.
+        </li>
+        <li>Sau bữa sáng, đoàn tham quan Thánh địa Mỹ Sơn - di sản văn hóa thế giới UNESCO, khám phá các đền tháp Chăm
+          Pa cổ kính.</li>
+        <li>Quý khách tự do mua sắm đặc sản tại chợ địa phương như bánh tráng nướng, mì Quảng khô, nước mắm Nam Ô để làm
+          quà cho người thân và bạn bè.</li>
+      </ul>
+      <ul><strong><i class="fa-solid fa-cookie"></i> Buổi trưa:</strong><br>
+        <li>Quý khách dùng bữa trưa tại nhà hàng với thực đơn nhẹ nhàng nhưng đầy đủ dinh dưỡng, thưởng thức đặc sản cao
+          lầu.</li>
+        <li>Sau bữa trưa, đoàn làm thủ tục trả phòng khách sạn và chuẩn bị kết thúc tour.</li>
+        <li>Trên hành trình về trung tâm Đà Nẵng, xe dừng chân tại làng đá mỹ nghệ Non Nước để quý khách mua thêm đặc
+          sản địa phương như đồ thủ công mỹ nghệ, bánh khô mè...</li>
+      </ul>
+      <ul><strong><i class="fa-solid fa-van-shuttle"></i> Buổi chiều:</strong><br>
+        <li>Đoàn trở về trung tâm Đà Nẵng, nghỉ ngơi và thư giãn trên xe.</li>
+        <li>Hướng dẫn viên tổ chức các hoạt động hoạt náo, kể chuyện vui hoặc giao lưu văn nghệ nhẹ nhàng giúp chuyến đi
+          trở nên thú vị hơn.</li>
+        <li>Dự kiến đến trung tâm Đà Nẵng lúc 15h00, kết thúc chuyến đi.</li>
+      </ul>
+    </div>
+
+    <div class="image-grid">
+      <div class="image-item">
+        <img src="../images/Đà Nẵng - Quảng Nam/my_son1.jpg" alt="Thánh địa Mỹ Sơn">
+        <div class="caption">Thánh địa Mỹ Sơn</div>
       </div>
-      <div class="image-grid">
-        <div class="image-item">
-          <img src="images/Đà Nẵng - Quảng Nam/my_son1.jpg" alt="Thánh địa Mỹ Sơn">
-          <div class="caption">Thánh địa Mỹ Sơn</div>
-        </div>
-        <div class="image-item">
-          <img src="images/Đà Nẵng - Quảng Nam/banh_trang_nuong.jpg" alt="Bánh tráng nướng">
-          <div class="caption">Bánh tráng nướng</div>
-        </div>
-        <div class="image-item">
-          <img src="images/Đà Nẵng - Quảng Nam/nuoc_mam_nam_o.jpg" alt="Nước mắm Nam Ô">
-          <div class="caption">Nước mắm Nam Ô</div>
-        </div>
-        <div class="image-item">
-          <img src="images/Đà Nẵng - Quảng Nam/banh_kho_me.jpeg" alt="Bánh khô mè">
-          <div class="caption">Bánh khô mè</div>
-        </div>
+      <div class="image-item">
+        <img src="../images/Đà Nẵng - Quảng Nam/banh_trang_nuong.jpg" alt="Bánh tráng nướng">
+        <div class="caption">Bánh tráng nướng</div>
+      </div>
+      <div class="image-item">
+        <img src="../images/Đà Nẵng - Quảng Nam/nuoc_mam_nam_o.jpg" alt="Nước mắm Nam Ô">
+        <div class="caption">Nước mắm Nam Ô</div>
+      </div>
+      <div class="image-item">
+        <img src="../images/Đà Nẵng - Quảng Nam/banh_kho_me.jpeg" alt="Bánh khô mè">
+        <div class="caption">Bánh khô mè</div>
       </div>
     </div>
+  </div>
+
   </div>
 
   <div class="note-container">
@@ -352,53 +379,59 @@
     </form>
   </div>
 
+
   <!--phần mở rộng: có thể bạn sẽ thích-->
   <div class="seemore-container">
     <!-- Bên trái: Có thể bạn quan tâm -->
     <div class="main-content">
       <h2>Có thể bạn quan tâm</h2>
+
       <div class="moretour">
-        <img src="images/TPHCM - Đà lạt/đà lạt.png" alt="Đà Lạt" class="main-image">
+        <img src="../images/TPHCM - Đà lạt/đà lạt.png" alt="Đà Lạt" class="main-image">
         <div class="tour-info">
-          <h3><a href="tphcmdalat3n2d.html">Tour TP. Hồ Chí Minh - Đà Lạt 3N2Đ</a></h3>
+          <h3><a href="../Chi tiết tour/tphcmdalat3n2d.html">Tour TP. Hồ Chí Minh - Đà Lạt 3N2Đ</a></h3>
           <p>Vùng đất mang trong mình như thành phố ngàn hoa, xứ sở tình yêu,...</p>
-          <p class="readmore"><a href="tphcmdalat3n2d.html">Tìm hiểu thêm</a></p>
+          <p class="readmore"><a href="../Chi tiết tour/tphcmdalat3n2d.html">Tìm hiểu thêm</a></p>
           <div class="small-images">
-            <img src="images/TPHCM - Đà lạt/đà lạt 1.png" alt="">
-            <img src="images/TPHCM - Đà lạt/đà lạt 2.png" alt="">
-            <img src="images/TPHCM - Đà lạt/đà lạt 3.png" alt="">
+            <img src="../images/TPHCM - Đà lạt/đà lạt 1.png" alt="">
+            <img src="../images/TPHCM - Đà lạt/đà lạt 2.png" alt="">
+            <img src="../images/TPHCM - Đà lạt/đà lạt 3.png" alt="">
           </div>
         </div>
       </div>
+
       <div class="moretour">
-        <img src="images/TPHCM - Đà Nẵng - Huế - Hội An/cố đô Huế.jpg" alt="Hội An" class="main-image">
+        <img src="../images/TPHCM - Đà Nẵng - Huế - Hội An/cố đô Huế.jpg" alt="Hội An" class="main-image">
         <div class="tour-info">
-          <h3><a href="tphcmdananghuehoian5n4d.html">Tour TP. Hồ Chí Minh - Đà Nẵng - Huế - Hội An 5N4Đ</a></h3>
+          <h3><a href="../Chi tiết tour/tphcmdananghuehoian5n4d.html">Tour TP. Hồ Chí Minh - Đà Nẵng - Huế - Hội An
+              5N4Đ</a></h3>
           <p>Nổi tiếng bởi vẻ đẹp kiến trúc truyền thống, hài hòa...</p>
-          <p class="readmore"><a href="tphcmdananghuehoian5n4d.html">Tìm hiểu thêm</a></p>
+          <p class="readmore"><a href="../Chi tiết tour/tphcmdananghuehoian5n4d.html">Tìm hiểu thêm</a></p>
           <div class="small-images">
-            <img src="images/TPHCM - Đà Nẵng - Huế - Hội An/hội an 1.png" alt="">
-            <img src="images/TPHCM - Đà Nẵng - Huế - Hội An/cố đô Huế 1.jpg" alt="">
-            <img src="images/TPHCM - Đà Nẵng - Huế - Hội An/hội an 2.png" alt="">
+            <img src="../images/TPHCM - Đà Nẵng - Huế - Hội An/hội an 1.png" alt="">
+            <img src="../images/TPHCM - Đà Nẵng - Huế - Hội An/cố đô Huế.jpg" alt="">
+            <img src="../images/TPHCM - Đà Nẵng - Huế - Hội An/Hội An.png" alt="">
           </div>
         </div>
       </div>
+
       <!-- Các tour khác hiển thị sau khi chọn Xem thêm -->
       <div id="moreTours" style="display: none;">
         <div class="moretour">
-          <img src="images/Hà Nội - Nha Trang/nha trang 1.jpeg" alt="Nha Trang" class="main-image">
+          <img src="../images/Hà Nội - Nha Trang/nha trang 1.jpeg" alt="Nha Trang" class="main-image">
           <div class="tour-info">
-            <h3><a href="hanoinhatrang4n3d.html">Tour Hà Nội - Nha Trang 4N3Đ</a></h3>
+            <h3><a href="../Chi tiết tour/hanoinhatrang4n3d.html">Tour Hà Nội - Nha Trang 4N3Đ</a></h3>
             <p>Nha Trang - "hòn ngọc của biển Đông" - là một trong những thành phố biển...</p>
-            <p class="readmore"><a href="hanoinhatrang4n3d.html">Tìm hiểu thêm</a></p>
+            <p class="readmore"><a href="../Chi tiết tour/hanoinhatrang4n3d.html">Tìm hiểu thêm</a></p>
             <div class="small-images">
-              <img src="images/Hà Nội - Nha Trang/bai-bien-Nha-Trang.jpg" alt="">
-              <img src="images/Hà Nội - Nha Trang/nha trang 2.jpg" alt="">
-              <img src="images/Hà Nội - Nha Trang/nha trang 3.jpg" alt="">
+              <img src="../images/Hà Nội - Nha Trang/biển nha trang.jpg" alt="">
+              <img src="../images/Hà Nội - Nha Trang/nha trang 2.jpg" alt="">
+              <img src="../images/Hà Nội - Nha Trang/nha trang 3.jpg" alt="">
             </div>
           </div>
         </div>
       </div>
+
       <button class="load-more" onclick="toggleMoreTours()">Xem thêm ▼</button>
     </div>
 
@@ -406,15 +439,17 @@
     <div class="sidebar">
       <h3>Bài viết liên quan</h3>
       <ul>
-        <li><a href="tintuc1.html"></a>Khám phá và check-in chụp ảnh ở Đà Nẵng: Top 5 địa điểm đẹp không nên bỏ qua</li>
-        <li><a href="tintuc2.html"></a>Khám phá ẩm thực miền Trung: Thưởng thức món ăn bình dị ở Huế - Đà Nẵng - Hội An
-        </li>
-        <li><a href="tintuc3.html"></a>Bí quyết giữ gìn sức khỏe khi du lịch dài ngày</li>
-        <li><a href="tintuc4.html"></a>Cách tối ưu trải nghiệm ẩm thực tại địa phương</li>
-        <li><a href="tintuc5.html"></a>Ấn tượng trải nghiệm du lịch Nha Trang bằng tàu hoả</li>
+        <li><a href="../Danh mục/tintuc1.html">Khám phá và check-in chụp ảnh ở Đà Nẵng: Top 5 địa điểm đẹp không nên bỏ
+            qua</a></li>
+        <li><a href="../Danh mục/tintuc2.html">Khám phá ẩm thực miền Trung: Thưởng thức món ăn bình dị ở Huế - Đà Nẵng -
+            Hội An</a></li>
+        <li><a href="../Danh mục/tintuc3.html">Bí quyết giữ gìn sức khỏe khi du lịch dài ngày</a></li>
+        <li><a href="../Danh mục/tintuc4.html">Cách tối ưu trải nghiệm ẩm thực tại địa phương</a></li>
+        <li><a href="../Danh mục/tintuc5.html">Ấn tượng trải nghiệm du lịch Nha Trang bằng tàu hoả</a></li>
       </ul>
     </div>
   </div>
+
 
   <footer class="footer">
     <div class="footer-top">
@@ -487,4 +522,5 @@
       src="images/Icon&logo/back.png"></button>
 
 </body>
+
 </html>

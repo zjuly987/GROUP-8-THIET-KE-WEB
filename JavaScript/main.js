@@ -40,12 +40,6 @@ function formatPrice(price) {
   return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " VNĐ";
 }
 
-function addToCart(tourKey) {
-  if (dataTour[tourKey] && !cartItems.includes(tourKey)) {
-    cartItems.push(tourKey);
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-  }
-}
 
 document.getElementById('cartLink').addEventListener('click', function(e) {
   e.preventDefault();
@@ -210,3 +204,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
+
+
+
