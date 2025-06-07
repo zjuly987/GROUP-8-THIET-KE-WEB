@@ -170,6 +170,7 @@ header {
   cursor: pointer;
   z-index: 2;
   transition: background-color 0.3s ease;
+  z-index: 1001;
 }
 .underbanner-prev:hover, .underbanner-next:hover {
   background-color: rgba(0,0,0,0.6);
@@ -189,6 +190,7 @@ header {
   margin-right: 100px;
   padding-top : 80px;
 }
+
 
 /*css chân trang*/
 .footer {
@@ -1083,7 +1085,7 @@ header {
 .underbanner-slideshow {
   position: relative;
   width: 100%;
-  height:auto;
+  height: 320px;
   overflow: hidden;
   margin-bottom: 10px;
 }
