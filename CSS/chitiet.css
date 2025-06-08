@@ -56,6 +56,18 @@ header {
   height: 30px;
 }
 
+/* Ẩn hamburger menu trên desktop */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.hamburger img {
+  width: 35px;
+  height: auto;
+}
+
 /*css cho thanh điều hướng ở banner*/
 .main-nav {
   display: flex;
@@ -711,8 +723,7 @@ background-color: #ccc;
   background-color: #fff;
 }
 
-
-/* pop-up */
+/* pop-up giỏ hàng */
 .cart-popup {
   position: fixed;
   top: 0;
@@ -767,20 +778,17 @@ background-color: #ccc;
   border-collapse: collapse;
   margin-bottom: 20px;
 }
-
 .cart-table th,
 .cart-table td {
   text-align: left;
   padding: 10px;
   border-bottom: 1px solid #ddd;
 }
-
 .product-info {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
 .product-info img {
   width: 50px;
   height: 40px;
@@ -788,7 +796,6 @@ background-color: #ccc;
   border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
-
 .cart-footer {
   display: flex;
   justify-content: space-between;
@@ -796,17 +803,14 @@ background-color: #ccc;
   padding-top: 15px;
   border-top: 1px solid #ddd;
 }
-
 .cart-footer .total {
   font-size: 16px;
   font-weight: bold;
 }
-
 .cart-actions {
   display: flex;
   gap: 10px;
 }
-
 .cart-actions button {
   padding: 8px 16px;
   font-size: 14px;
@@ -816,24 +820,19 @@ background-color: #ccc;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 .cart-actions .close-btn {
   background-color: #ccc;
 }
-
 .cart-actions .close-btn:hover {
   background-color: #999;
 }
-
 .cart-actions .checkout-btn {
   background-color: #007bff;
   color: white;
 }
-
 .cart-actions .checkout-btn:hover {
   background-color: #0056b3;
 }
-
 .remove-btn {
   background: none;
   border: none;
@@ -853,7 +852,6 @@ background-color: #ccc;
   align-items: center;
   z-index: 9999;
 }
-
 .cart-content {
   background: #fff;
   border-radius: 12px;
@@ -862,23 +860,19 @@ background-color: #ccc;
   overflow-y: auto;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
-
 .cart-content.large {
   width: 66vw; /* 2/3 chiều rộng */
 }
-
 .cart-content h3 {
   margin-bottom: 15px;
   font-size: 20px;
   font-weight: bold;
 }
-
 .cart-table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
 }
-
 .cart-table th,
 .cart-table td {
   text-align: left;
@@ -886,13 +880,11 @@ background-color: #ccc;
   border-bottom: 1px solid #e0e0e0;
   vertical-align: middle;
 }
-
 .product-info {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
 .product-info img {
   width: 60px;
   height: 45px;
@@ -900,7 +892,6 @@ background-color: #ccc;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-
 .cart-footer {
   display: flex;
   justify-content: space-between;
@@ -908,17 +899,14 @@ background-color: #ccc;
   padding-top: 15px;
   border-top: 1px solid #ddd;
 }
-
 .cart-footer .total {
   font-size: 16px;
   font-weight: bold;
 }
-
 .cart-actions {
   display: flex;
   gap: 10px;
 }
-
 .cart-actions button {
   padding: 10px 16px;
   font-size: 14px;
@@ -928,25 +916,20 @@ background-color: #ccc;
   font-weight: 600;
   transition: all 0.3s ease;
 }
-
 .cart-actions .close-btn {
   background-color: #ccc;
 }
-
 .cart-actions .close-btn:hover {
   background-color: #999;
   color: white;
 }
-
 .cart-actions .checkout-btn {
   background-color: #007bff;
   color: white;
 }
-
 .cart-actions .checkout-btn:hover {
   background-color: #0056b3;
 }
-
 .remove-btn {
   background: none;
   border: none;
@@ -956,11 +939,9 @@ background-color: #ccc;
   cursor: pointer;
   transition: color 0.3s ease;
 }
-
 .remove-btn:hover {
   color: darkred;
 }
-
 .cart-content h3 {
   font-size: 22px;
   text-align: center;
@@ -969,24 +950,20 @@ background-color: #ccc;
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
-
 .cart-table td, .cart-table th {
   font-size: 16px;
   color: #333;
 }
-
 .product-info span {
   font-weight: bold;
   color: #0F5DA6;
 }
-
 .cart-footer {
   border-top: 1px solid #ccc;
   margin-top: 20px;
   padding-top: 15px;
   font-size: 16px;
 }
-
 .cart-actions button {
   border-radius: 8px;
   font-size: 15px;
@@ -994,19 +971,6 @@ background-color: #ccc;
 }
 
 /*res cho header*/
-/* Ẩn hamburger menu trên desktop */
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.hamburger img {
-  width: 35px;
-  height: auto;
-}
-
 /* Mobile & tablet view */
 @media (max-width: 768px) {
   header {
@@ -1018,20 +982,17 @@ background-color: #ccc;
     gap: 8px;
     margin-left: 0;
   }
-
   .login-out {
     justify-content: center;
     flex-wrap: nowrap;
     gap: 15px;
     margin-left: 0;
   }
-
   .hamburger {
     display: block;
     align-items: center;
     justify-self: center;
   }
-
   .main-nav {
     display: none;
     flex-direction: column;
@@ -1039,91 +1000,75 @@ background-color: #ccc;
     background-color: #ecf2f8;
     margin-top: 10px;
   }
-
   .main-nav.active {
     display: flex;
   }
-
   .main-nav ul {
     flex-direction: column;
     gap: 10px;
     padding-left: 20px;
     margin: 10px 0;
   }
-
   .search-container {
     flex-direction: row;
     justify-content: space-between;
     
     padding: 0 10px;
   }
-
   .search-container input {
     flex-grow: 1;
   }
-
   .search-container button {
     margin-left: 5px;
   }
 }
 
+/*res cho giới thiệu chung đầu tiên*/
 /* Tablet landscape và nhỏ hơn */
 @media (max-width: 1024px) {
   .intro-container {
     padding: 100px 60px 0px 60px;
   }
-
   .intro h2 {
     font-size: 18px;
   }
-
   .intro-infor p {
     font-size: 15px;
   }
-
   .price-info .price {
     font-size: 20px;
   }
-
   .price-info .old-price {
     font-size: 16px;
   }
 }
-
 /* Tablet portrait và mobile */
 @media (max-width: 768px) {
   .intro-container {
     flex-direction: column;
     padding: 100px 30px 0px 30px;
   }
-
   .slideshow-container,
   .intro {
     width: 100%;
   }
-
   .slideshow-container {
     margin-bottom: 20px;
   }
-
   .intro {
     padding: 15px;
   }
-
   .intro-infor {
     flex-direction: column;
     gap: 10px;
   }
-
   .intro-infor p {
     flex: 1 1 100%;
     font-size: 14px;
   }
-
   .price-container {
     flex-direction: column;
   }
-
   .add-to-cart,
   .price-info {
     width: 100%;
@@ -1131,47 +1076,37 @@ background-color: #ccc;
     padding: 8px 0;
     text-align: center;
   }
-
   .price-info .price {
     font-size: 18px;
   }
-
   .price-info .old-price {
     font-size: 14px;
   }
-
   button {
     font-size: 16px;
     padding: 8px 12px;
   }
 }
-
 /* Mobile nhỏ (≤480px) */
 @media (max-width: 480px) {
   .intro-container {
     padding: 80px 20px 0px 20px;
   }
-
   .intro h2 {
     font-size: 16px;
   }
-
   .intro .loi-dan {
     font-size: 14px;
   }
-
   .add-to-cart p {
     font-size: 14px;
   }
-
   .price-info .price {
     font-size: 16px;
   }
-
   .price-info .old-price {
     font-size: 13px;
   }
-
   button {
     font-size: 14px;
     padding: 6px 10px;
@@ -1183,26 +1118,531 @@ background-color: #ccc;
   .intro-container {
     padding: 70px 10px 0px 10px;
   }
-
   .intro h2 {
     font-size: 14px;
   }
-
   .intro-infor p {
     font-size: 13px;
   }
-
   .price-info .price,
   .price-info .old-price {
     font-size: 14px;
   }
-
   .add-to-cart p {
     font-size: 13px;
   }
-
   button {
     font-size: 13px;
     padding: 5px 8px;
   }
 }
+
+/*res cho giới thiệu chung và lịch trình tour*/
+/* Tablet: co lại padding, giữ layout 2 cột */
+@media (max-width: 1024px) {
+  .gioithieu-lichtrinh {
+    padding: 10px 60px;
+  }
+  .gioithieu-lichtrinh h2 {
+    font-size: 18px;
+  }
+  .gioithieu-lichtrinh h3 {
+    font-size: 16px;
+  }
+  .gioithieu-lichtrinh p {
+    font-size: 15px;
+  }
+}
+/* Mobile: chuyển sang layout 1 cột */
+@media (max-width: 768px) {
+  .gioithieu-lichtrinh {
+    flex-direction: column;
+    padding: 10px 30px;
+  }
+  .gioithieuchung,
+  .lichtrinh {
+    width: 100%;
+  }
+  .gioithieu-lichtrinh h2 {
+    font-size: 17px;
+  }
+  .gioithieu-lichtrinh h3 {
+    font-size: 15px;
+  }
+  .gioithieu-lichtrinh p {
+    font-size: 14px;
+    margin: 8px 0;
+  }
+  .text-background {
+    padding: 15px;
+  }
+}
+/* Mobile nhỏ */
+@media (max-width: 480px) {
+  .gioithieu-lichtrinh {
+    padding: 10px 20px;
+  }
+  .gioithieu-lichtrinh h2 {
+    font-size: 16px;
+  }
+  .gioithieu-lichtrinh h3 {
+    font-size: 14px;
+  }
+  .gioithieu-lichtrinh p {
+    font-size: 13px;
+  }
+}
+/* Màn hình rất nhỏ */
+@media (max-width: 360px) {
+  .gioithieu-lichtrinh {
+    padding: 10px 10px;
+  }
+  .gioithieu-lichtrinh h2 {
+    font-size: 15px;
+  }
+  .gioithieu-lichtrinh h3 {
+    font-size: 13px;
+  }
+  .gioithieu-lichtrinh p {
+    font-size: 12.5px;
+  }
+  .text-background {
+    padding: 10px;
+  }
+}
+
+/*res cho lịch trình chi tiết tour*/
+/* Tablet landscape và nhỏ hơn */
+@media (max-width: 1024px) {
+  .detail {
+    padding: 10px 60px;
+  }
+  .day-box {
+    font-size: 15px;
+    padding: 15px;
+  }
+  .day-box h3 {
+    font-size: 17px;
+  }
+  .image-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .caption {
+    font-size: 13px;
+  }
+}
+/* Tablet portrait và mobile */
+@media (max-width: 768px) {
+  .detail {
+    padding: 10px 30px;
+  }
+  .day-box {
+    font-size: 14px;
+    padding: 12px;
+  }
+  .day-box h3 {
+    font-size: 16px;
+  }
+  .image-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .image-grid img {
+    max-height: 200px;
+  }
+  .caption {
+    font-size: 12px;
+  }
+}
+/* Mobile nhỏ */
+@media (max-width: 480px) {
+  .detail {
+    padding: 10px 20px;
+  }
+  .day-box {
+    font-size: 13px;
+    padding: 10px;
+  }
+  .day-box h3 {
+    font-size: 15px;
+  }
+  .image-grid img {
+    max-height: 160px;
+  }
+  .caption {
+    font-size: 11.5px;
+  }
+}
+/* Màn hình rất nhỏ */
+@media (max-width: 360px) {
+  .detail {
+    padding: 10px 10px;
+  }
+  .day-box {
+    font-size: 12.5px;
+    padding: 8px;
+  }
+  .day-box h3 {
+    font-size: 14px;
+  }
+  .image-grid img {
+    max-height: 140px;
+  }
+  .caption {
+    font-size: 11px;
+    padding: 6px;
+  }
+}
+
+/*res cho lưu ý về giá tour*/
+/* Tablet */
+@media (max-width: 1024px) {
+  .note-container {
+    margin: 0 60px;
+    padding: 10px 60px;
+  }
+
+  .note-header h3 {
+    font-size: 16px;
+  }
+
+  .note-content ul li {
+    font-size: 15px;
+  }
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .note-container {
+    margin: 0 30px;
+    padding: 10px 30px;
+  }
+  .note-header h3 {
+    font-size: 15px;
+  }
+  .note-content ul li {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+/* Mobile nhỏ */
+@media (max-width: 480px) {
+  .note-container {
+    margin: 0 20px;
+    padding: 10px 20px;
+  }
+  .note-header {
+    padding: 10px 0;
+  }
+  .note-header h3 {
+    font-size: 14px;
+  }
+  .note-content {
+    padding: 8px 0 16px 0;
+  }
+  .note-content ul li {
+    font-size: 13px;
+  }
+}
+/* Màn hình rất nhỏ */
+@media (max-width: 360px) {
+  .note-container {
+    margin: 0 10px;
+    padding: 8px 15px;
+    border-radius: 6px;
+  }
+  .note-header h3 {
+    font-size: 13px;
+  }
+  .note-content ul li {
+    font-size: 12.5px;
+  }
+}
+
+/*res cho form yêu cầu tư vấn*/
+/* Tablet */
+@media (max-width: 1024px) {
+  .form-container {
+    padding: 10px 60px;
+  }
+  .form-group label,
+  .form-group input,
+  .form-group textarea {
+    font-size: 15px;
+  }
+  .form-footer button {
+    width: 300px;
+    font-size: 15px;
+  }
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 10px 30px;
+  }
+  .form-container h2 {
+    font-size: 18px;
+  }
+  .form-group.inline {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .form-group label,
+  .form-group input,
+  .form-group textarea {
+    font-size: 14px;
+  }
+  .form-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0 10px;
+  }
+  .form-footer .checkbox-group {
+    font-size: 14px;
+  }
+  .form-footer button {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+/* Mobile nhỏ */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 10px 20px;
+  }
+  .form-container h2 {
+    font-size: 16px;
+  }
+  .form-group label,
+  .form-group input,
+  .form-group textarea {
+    font-size: 13.5px;
+  }
+  .form-footer .checkbox-group {
+    font-size: 13px;
+  }
+  .form-footer button {
+    font-size: 13.5px;
+  }
+}
+/* Màn hình rất nhỏ */
+@media (max-width: 360px) {
+  .form-container {
+    padding: 10px 10px;
+  }
+  .form-container h2 {
+    font-size: 15px;
+  }
+  .form-group label,
+  .form-group input,
+  .form-group textarea {
+    font-size: 12.5px;
+  }
+  .form-footer .checkbox-group {
+    font-size: 12.5px;
+  }
+  .form-footer button {
+    font-size: 12.5px;
+  }
+}
+
+/*res cho có thể bạn quan tâm và bài viết liên quan*/
+/* Tablet */
+@media (max-width: 1024px) {
+  .seemore-container {
+    padding: 10px 40px;
+    gap: 20px;
+  }
+  .main-image {
+    width: 220px;
+    height: 160px;
+  }
+  .small-images img {
+    width: 90px;
+    height: 60px;
+  }
+  .main-content h2,
+  .sidebar h3 {
+    font-size: 18px;
+  }
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .seemore-container {
+    flex-direction: column;
+    padding: 10px 25px;
+  }
+  .main-image {
+    width: 100%;
+    height: auto;
+  }
+  .moretour {
+    flex-direction: column;
+    padding-left: 0;
+    gap: 12px;
+  }
+  .small-images {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .small-images img {
+    width: 80px;
+    height: 60px;
+  }
+  .sidebar {
+    border-left: none;
+    padding-top: 10px;
+  }
+  .main-content h2,
+  .sidebar h3 {
+    font-size: 17px;
+  }
+  .load-more {
+    width: 100%;
+    font-size: 15px;
+  }
+}
+/* Mobile nhỏ */
+@media (max-width: 480px) {
+  .seemore-container {
+    padding: 10px 15px;
+  }
+  .main-content h2,
+  .sidebar h3 {
+    font-size: 16px;
+  }
+  .main-image {
+    height: 160px;
+  }
+  .tour-info p {
+    font-size: 14px;
+  }
+  .small-images img {
+    width: 70px;
+    height: 50px;
+  }
+  .load-more {
+    font-size: 14px;
+  }
+}
+/* Rất nhỏ */
+@media (max-width: 360px) {
+  .main-content h2,
+  .sidebar h3 {
+    font-size: 15px;
+  }
+  .small-images img {
+    width: 60px;
+    height: 45px;
+  }
+  .sidebar ul {
+    padding: 0 10px;
+  }
+  .sidebar li {
+    margin-left: 5px;
+    font-size: 13.5px;
+  }
+  .load-more {
+    font-size: 13.5px;
+  }
+}
+
+/**/
+/* Tablet */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 10px 30px;
+  }
+  .footer-top h2 {
+    font-size: 20px;
+  }
+  .footer-column h3 {
+    font-size: 16px;
+  }
+  .footer-column ul li {
+    font-size: 15px;
+  }
+  .payment-icons img {
+    height: 36px;
+    margin-right: 15px;
+  }
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px 20px;
+  }
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .footer-main {
+    flex-direction: column;
+  }
+  .footer-column {
+    margin-right: 0;
+  }
+  .footer-column h3 {
+    font-size: 15px;
+  }
+  .footer-column ul li {
+    font-size: 14px;
+  }
+  .payment-icons img {
+    height: 32px;
+  }
+  .footer-bottom p {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+/* Mobile nhỏ */
+@media (max-width: 480px) {
+  .footer-top h2 {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+  }
+  .hotline {
+    font-size: 14px;
+    padding: 4px 12px;
+  }
+  .footer-column h3 {
+    font-size: 14px;
+  }
+  .footer-column ul li {
+    font-size: 13.5px;
+  }
+  .footer-bottom p {
+    font-size: 13px;
+  }
+  .payment-icons img {
+    height: 28px;
+  }
+}
+/* Siêu nhỏ */
+@media (max-width: 360px) {
+  .footer {
+    padding: 10px;
+  }
+  .footer-top,
+  .footer-main {
+    gap: 15px;
+  }
+  .footer-column ul li {
+    font-size: 12.5px;
+  }
+  .footer-bottom p {
+    font-size: 12px;
+  }
+  .hotline {
+    font-size: 13px;
+    padding: 3px 10px;
+  }
+}
+
+
+
+
