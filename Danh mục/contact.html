@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +10,7 @@
   <link rel="stylesheet" href="../CSS/chitiet.css">
   <script src="../JavaScript/chitiet.js"></script>
   <script src="../JavaScript/thanhtoan.js"></script>
+  <script src="../JavaScript/menu.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -23,14 +23,18 @@
         </a>
         <h1>VIETWANDER</h1>
       </div>
+       <!-- Nút hamburger-->
+    <button class="hamburger" id="hamburger-btn">
+      <img src="../images/IconAndLogo/menu.png" alt="Menu">
+    </button>
       <div class="login-out">
-        <a href="signin.html"><img class="icon" src="../images/IconAndLogo/đăng nhập.png">Đăng nhập</a>
-        <a href="signup.html"><img class="icon" src="../images/IconAndLogo/đăng ký.png">Đăng ký</a>
+          <a href="../Danh mục/signup.html"><img class="icon" src="../images/IconAndLogo/đăng nhập.png">Đăng nhập</a>
+          <a href="../Danh mục/signin.html"><img class="icon" src="../images/IconAndLogo/đăng ký.png">Đăng ký</a>
       </div>
     </div>
 
     <!--nav-->
-    <nav class="main-nav">
+    <nav class="main-nav" id="main-nav">
       <ul>
         <li><a href="../index.html">TRANG CHỦ</a></li>
         <li><a href="gioithieu.html">GIỚI THIỆU</a></li>

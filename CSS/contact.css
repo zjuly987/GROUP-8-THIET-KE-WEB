@@ -430,4 +430,76 @@ header {
   background-color: #fff;
 }
 
+/*res cho header*/
+/* Ẩn hamburger menu trên desktop */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
+.hamburger img {
+  width: 35px;
+  height: auto;
+}
+
+/* Mobile & tablet view */
+@media (max-width: 768px) {
+  header {
+    padding: 5px 0;
+  }
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-left: 0;
+  }
+
+  .login-out {
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 15px;
+    margin-left: 0;
+  }
+
+  .hamburger {
+    display: block;
+    align-items: center;
+    justify-self: center;
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ecf2f8;
+    margin-top: 10px;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+    margin: 10px 0;
+  }
+
+  .search-container {
+    flex-direction: row;
+    justify-content: space-between;
+    
+    padding: 0 10px;
+  }
+
+  .search-container input {
+    flex-grow: 1;
+  }
+
+  .search-container button {
+    margin-left: 5px;
+  }
+}
