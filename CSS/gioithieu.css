@@ -168,7 +168,7 @@ header {
   content: "";
   position: absolute;
   inset: 0;
-  background: url('images/gioithieu.png') center/cover no-repeat;
+  background: url('../images/Giới thiệu/gioithieu.png') center/cover no-repeat;
   z-index: 1;
 }
 .meaning-container::after {
