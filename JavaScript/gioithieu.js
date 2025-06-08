@@ -10,7 +10,7 @@
   window.addEventListener("load", updateMainPadding);
   window.addEventListener("resize", updateMainPadding);
   //ẩn đi
-window.addEventListener('scroll', function () {
+  window.addEventListener('scroll', function () {
     const header = document.querySelector('header'); //Lấy phần tử <header> trong trang và gán vào biến header
     const scrollTop = window.pageYOffset; //Lấy vị trí cuộn hiện tại theo chiều dọc của trang (tính từ trên xuống)
     const documentHeight = document.documentElement.scrollHeight;
@@ -24,23 +24,6 @@ window.addEventListener('scroll', function () {
       header.style.top = "0";
     }
   });
-
-//trở về đầu trang
-// Hiển thị nút khi cuộn xuống 100px
-  window.onscroll = function () {
-    const btn = document.getElementById("backToTopBtn");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      btn.style.display = "block";
-    } else {
-      btn.style.display = "none";
-    }
-  };
-
-  // Hàm cuộn về đầu trang
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
 //slideshow
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
@@ -72,5 +55,21 @@ function nextSlide() {
   currentSlide = (currentSlide + 1) % slides.length;
   showSlide(currentSlide);
 }
+
+//trở về đầu trang
+// Hiển thị nút khi cuộn xuống 100px
+  window.onscroll = function () {
+    const btn = document.getElementById("backToTopBtn");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // Hàm cuộn về đầu trang
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
 
