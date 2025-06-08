@@ -152,11 +152,11 @@ header {
 }
 .underbanner-slide img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9; 
   display: block;
-  cursor: pointer;
-  object-fit: cover;
 }
+
 /* Nút chuyển trái/phải */
 .underbanner-prev, .underbanner-next {
   position: absolute;
