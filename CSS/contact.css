@@ -218,7 +218,7 @@ header {
 
 .contact-form {
   flex: 2;
-  min-width: 300px;
+
   gap: 15px;
 }
 .contact-form h2{
@@ -274,6 +274,7 @@ header {
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 100%;
 }
 .contact-faq h2{
   text-align: center;
@@ -320,6 +321,7 @@ header {
 .faq p{
   font-style: italic;
   font-size: large;
+  color: black;
 }
 /*bản đồ*/
 .map-container{
@@ -501,5 +503,20 @@ header {
 
   .search-container button {
     margin-left: 5px;
+  }
+
+  .faq {
+    margin: 15px;
+    padding: 10px 10px 15px 5px;
+  }
+
+  .info-container {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .contact-container {
+    padding: 20px;
+    margin: 10px;
   }
 }
