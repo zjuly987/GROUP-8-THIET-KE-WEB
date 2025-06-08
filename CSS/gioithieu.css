@@ -449,7 +449,7 @@ header {
     display: flex;
     width: 95%;
     background-color: #ffffff;
-    margin:0 20px 0 20px;
+    margin: 0 auto;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
