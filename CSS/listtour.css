@@ -306,9 +306,8 @@ h2 {
   transition: opacity 0.3s ease; 
 }
 
-/* Khi hover vào tour-item, tag hiện ra */
 .tour-item:hover .tag {
-  opacity: 1; /* Hiện tag */
+  opacity: 1; 
 }
 
 .tour-item h3 {
@@ -398,7 +397,7 @@ h2 {
 .divider {
   border: none;
   height: 0.5px;
-  background-color: #ddd; /* Màu xám nhạt */
+  background-color: #ddd; 
   margin: 30px 0; /* Khoảng cách trên và dưới */
   }
 /* css cho điểm đến hấp dẫn */
