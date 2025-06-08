@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../CSS/listtour.css">
   <script src="../JavaScript/listtour.js"></script>
   <script src="../JavaScript/tawk.js"></script>
+  <script src="../JavaScript/menu.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -27,7 +28,11 @@
     </div>
 
     <!--nav-->
-    <nav class="main-nav">
+    <!-- Nút hamburger-->
+    <button class="hamburger" id="hamburger-btn">
+      <img src="../images/IconAndLogo/menu.png" alt="Menu">
+    </button>
+    <nav class="main-nav" id="main-nav">
       <ul>
         <li><a href="../index.html">TRANG CHỦ</a></li>
         <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
@@ -41,7 +46,7 @@
         </li>
         <li><a href="tintuc.html">TIN TỨC</a></li>
         <li><a href="contact.html">LIÊN HỆ</a></li>
-        <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i> GIỎ HÀNG</a></li>
+        <li><a href="../cart.html"><i class="fa-solid fa-bag-shopping"></i> GIỎ HÀNG</a></li>
       </ul>
       <div class="search-container">
         <input type="text" placeholder="Tìm kiếm..." class="search-input">
@@ -473,7 +478,7 @@
   </footer>
 
   <button onclick="scrollToTop()" id="backToTopBtn" title="Về đầu trang"><img class="icon"
-      src="images/Images-header/back.png"></button>
+      src="../images/IconAndLogo/back.png"></button>
 
 </body>
 

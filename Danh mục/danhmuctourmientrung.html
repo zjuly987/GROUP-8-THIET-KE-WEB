@@ -7,22 +7,10 @@
   <title>Danh mục tour miền Trung</title>
   <link rel="stylesheet" href="../CSS/listtour.css">
   <script src="../JavaScript/listtour.js"></script>
+  <script src="../JavaScript/tawk.js"></script>
+  <script src="../JavaScript/menu.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-  var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-  (function () {
-    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/682b48d1f062c51916e08ad7/1irkh8sv4';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-    s0.parentNode.insertBefore(s1, s0);
-  })();
-</script>
-<!--End of Tawk.to Script-->
-
 <body>
   <header>
     <!--banner-->
@@ -40,6 +28,10 @@
     </div>
 
     <!--nav-->
+    <!-- Nút hamburger-->
+    <button class="hamburger" id="hamburger-btn">
+      <img src="../images/IconAndLogo/menu.png" alt="Menu">
+    </button>
     <nav class="main-nav">
       <ul>
         <li><a href="../index.html">TRANG CHỦ</a></li>
@@ -236,8 +228,7 @@
         </div>
         <h3>Tour TP.HCM - Phan Thiết - Mũi Né 3N2Đ</h3>
         <div class="itinerary">
-          <p><i class="fas fa-map-marker-alt"></i> Hành trình: TP.HCM - Mũi Né - Suối Tiên Đồi Cát Bay - Làng Chài Mũi
-            Né - Tháp Chăm Poshanư - TP.HCM
+          <p><i class="fas fa-map-marker-alt"></i> Hành trình: TP.HCM - Mũi Né - Suối Tiên Đồi Cát Bay - Làng Chài Mũi Né - Tháp Chăm Poshanư - TP.HCM
             <br><i class="fas fa-ship"></i> Phương tiện: Ô tô du lịch
           </p>
         </div>
@@ -474,7 +465,7 @@
       <div class="footer-column">
         <h3><a href="dieukhoanquydinh.html">Điều khoản và quy định</a></h3>
         <ul>
-          <li>Chính sách và điều khoản chung</li>
+          <li><a href="dieukhoanquydinh.html">Chính sách và điều khoản chung</a></li>
           <li><a href="#">Quy định về thanh toán</a></li>
           <li><a href="#">Quy định về xác nhận thông tin đặt tour</a></li>
           <li><a href="#">Chính sách bảo vệ dữ liệu cá nhân</a></li>
