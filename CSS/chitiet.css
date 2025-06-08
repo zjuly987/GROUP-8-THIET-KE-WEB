@@ -992,3 +992,143 @@ background-color: #ccc;
   font-size: 15px;
   transition: 0.3s ease;
 }
+
+/* Tablet landscape và nhỏ hơn */
+@media (max-width: 1024px) {
+  .intro-container {
+    padding: 100px 60px 0px 60px;
+  }
+
+  .intro h2 {
+    font-size: 18px;
+  }
+
+  .intro-infor p {
+    font-size: 15px;
+  }
+
+  .price-info .price {
+    font-size: 20px;
+  }
+
+  .price-info .old-price {
+    font-size: 16px;
+  }
+}
+
+/* Tablet portrait và mobile */
+@media (max-width: 768px) {
+  .intro-container {
+    flex-direction: column;
+    padding: 100px 30px 0px 30px;
+  }
+
+  .slideshow-container,
+  .intro {
+    width: 100%;
+  }
+
+  .slideshow-container {
+    margin-bottom: 20px;
+  }
+
+  .intro {
+    padding: 15px;
+  }
+
+  .intro-infor {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .intro-infor p {
+    flex: 1 1 100%;
+    font-size: 14px;
+  }
+
+  .price-container {
+    flex-direction: column;
+  }
+
+  .add-to-cart,
+  .price-info {
+    width: 100%;
+    justify-content: center;
+    padding: 8px 0;
+    text-align: center;
+  }
+
+  .price-info .price {
+    font-size: 18px;
+  }
+
+  .price-info .old-price {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+}
+
+/* Mobile nhỏ (≤480px) */
+@media (max-width: 480px) {
+  .intro-container {
+    padding: 80px 20px 0px 20px;
+  }
+
+  .intro h2 {
+    font-size: 16px;
+  }
+
+  .intro .loi-dan {
+    font-size: 14px;
+  }
+
+  .add-to-cart p {
+    font-size: 14px;
+  }
+
+  .price-info .price {
+    font-size: 16px;
+  }
+
+  .price-info .old-price {
+    font-size: 13px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
+
+/* Màn hình siêu nhỏ (≤360px) */
+@media (max-width: 360px) {
+  .intro-container {
+    padding: 70px 10px 0px 10px;
+  }
+
+  .intro h2 {
+    font-size: 14px;
+  }
+
+  .intro-infor p {
+    font-size: 13px;
+  }
+
+  .price-info .price,
+  .price-info .old-price {
+    font-size: 14px;
+  }
+
+  .add-to-cart p {
+    font-size: 13px;
+  }
+
+  button {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+}
