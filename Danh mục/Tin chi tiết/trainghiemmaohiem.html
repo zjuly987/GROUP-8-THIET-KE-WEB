@@ -4,26 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tin tức - 7 trải nghiệm mạo hiểm</title>
+  <title>Tin tức - Ẩm thực miền Nam</title>
   <link rel="stylesheet" href="../../CSS/tinchitiet.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../../JavaScript/thanhtoan.js"></script>
+  <script src="../../JavaScript/chitiet.js"></script>
+  <script src="../../JavaScript/tawk.js"></script>
+  <script src="../../JavaScript/cart.js"></script>
   <script src="../../JavaScript/tinchitiet.js"></script>
+  <script src="../../JavaScript/menu.js"></script>
 </head>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-  var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-  (function () {
-    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/682b48d1f062c51916e08ad7/1irkh8sv4';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-    s0.parentNode.insertBefore(s1, s0);
-  })();
-</script>
-<!--End of Tawk.to Script-->
 
 <body>
   <header>
@@ -43,7 +35,11 @@
     </div>
 
     <!--nav-->
-    <nav class="main-nav">
+    <!-- Nút hamburger-->
+    <button class="hamburger" id="hamburger-btn">
+      <img src="../../images/IconAndLogo/menu.png" alt="Menu">
+    </button>
+    <nav class="main-nav" id="main=nav">
       <ul>
         <li><a href="../../index.html">TRANG CHỦ</a></li>
         <li><a href="../gioithieu.html">GIỚI THIỆU</a></li>
