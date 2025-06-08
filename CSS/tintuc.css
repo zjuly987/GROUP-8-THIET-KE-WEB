@@ -551,7 +551,7 @@ height: 30px;
   background: #ccc;
   color: #000;
 }
-/* css cho footer */ /*Giống của Trang nhưng có thay đổi font chữ */
+
 /*css cho footer*/
 .footer {
   background-color: #0962a8;
@@ -623,7 +623,7 @@ height: 30px;
   margin: 5px 0;
   font-size: 15px;
 }
-/* Responsive cho các thiết bị */
+/* Responsive trên các thiết bị */
 /* Responsive cho header*/
 /* Ẩn hamburger menu trên desktop */
 .hamburger {
@@ -699,37 +699,6 @@ height: 30px;
 }
 /* Màn hình trung bình (768px–1200px) */
 @media (max-width: 1200px) {
-  /* Điều chỉnh padding cho header */
-  header {
-    padding: 5px 50px;
-  }
-
-  /* Điều chỉnh logo và tiêu đề */
-  .logo-container img {
-    width: 50px;
-    height: 36px;
-  }
-  .logo-container h1 {
-    font-size: 24px;
-  }
-
-  /* Điều chỉnh thanh điều hướng */
-  .main-nav ul {
-    gap: 20px;
-  }
-  .main-nav ul li {
-    padding-left: 3px;
-  }
-  .search-container input {
-    width: 180px;
-    font-size: 14px;
-  }
-  .search-container button {
-    width: 35px;
-    height: 35px;
-    padding: 8px;
-  }
-
   /* Điều chỉnh bố cục nội dung */
   .content {
     margin: 20px 50px;
@@ -740,7 +709,6 @@ height: 30px;
   .sidebar {
     padding-left: 15px;
   }
-
   /* Điều chỉnh tags wrapper */
   .tags-wrapper {
     gap: 60px;
@@ -772,66 +740,6 @@ height: 30px;
 
 /* Màn hình nhỏ (dưới 768px, mở rộng media query hiện có) */
 @media (max-width: 768px) {
-  /* Điều chỉnh header */
-  header {
-    padding: 5px 20px;
-  }
-  .header-top {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .logo-container {
-    margin-bottom: 10px;
-  }
-  .logo-container img {
-    width: 40px;
-    height: 29px;
-  }
-  .logo-container h1 {
-    font-size: 20px;
-  }
-  .login-out {
-    gap: 15px;
-  }
-  .login-out a {
-    font-size: 14px;
-  }
-  .icon {
-    width: 25px;
-    height: 25px;
-  }
-
-  /* Điều chỉnh thanh điều hướng */
-  .main-nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .main-nav ul {
-    flex-direction: column;
-    gap: 15px;
-  }
-  .main-nav ul li {
-    padding-left: 0;
-  }
-  .has-dropdown .dropdown {
-    position: static;
-    border: none;
-    background-color: #f9f9f9;
-    min-width: 100%;
-  }
-  .search-container {
-    width: 100%;
-  }
-  .search-container input {
-    width: 100%;
-    font-size: 14px;
-  }
-  .search-container button {
-    width: 30px;
-    height: 30px;
-    padding: 6px;
-  }
-
   /* Caption và tags */
   .caption {
     padding-top: 150px;
@@ -916,35 +824,6 @@ height: 30px;
 
 /* Màn hình rất nhỏ (dưới 480px) */
 @media (max-width: 480px) {
-  /* Header */
-  header {
-    padding: 5px 10px;
-  }
-  .logo-container h1 {
-    font-size: 18px;
-  }
-  .login-out {
-    gap: 10px;
-  }
-  .login-out a {
-    font-size: 12px;
-  }
-  .icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  /* Thanh điều hướng */
-  .main-nav {
-    font-size: 14px;
-  }
-  .main-nav ul {
-    gap: 10px;
-  }
-  .search-container input {
-    font-size: 12px;
-  }
-
   /* Caption và tags */
   .caption {
     font-size: 18px;

@@ -14,7 +14,9 @@
   <script src="../../JavaScript/tawk.js"></script>
   <script src="../../JavaScript/cart.js"></script>
   <script src="../../JavaScript/tinchitiet.js"></script>
+  <script src="../../JavaScript/menu.js"></script>
 </head>
+
 <body>
   <header>
     <!--banner-->
@@ -31,7 +33,11 @@
       </div>
     </div>
     <!--nav-->
-    <nav class="main-nav">
+    <!-- Nút hamburger-->
+    <button class="hamburger" id="hamburger-btn">
+      <img src="../../images/IconAndLogo/menu.png" alt="Menu">
+    </button>
+    <nav class="main-nav" id="main-nav">
       <ul>
         <li><a href="../../index.html">TRANG CHỦ</a></li>
         <li><a href="../gioithieu.html">GIỚI THIỆU</a></li>
@@ -207,7 +213,7 @@
     </div>
   </div>
   <button onclick="scrollToTop()" id="backToTopBtn" title="Về đầu trang"><img class="iconbackToTop"
-      src="../images/IconAndLogo/back.png"></button>
+      src="../../images/IconAndLogo/back.png"></button>
   <div class="content">
     <div class="main">
       <hr class="divider">

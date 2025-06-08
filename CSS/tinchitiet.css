@@ -765,85 +765,78 @@ height: 30px;
   margin: 5px 0;
   font-size: 15px;
 }
-/* responsive trên các thiết bị */
-/* Responsive cho Tiêu đề (Header) */
-@media (max-width: 992px) {
-  header {
-    padding: 5px 20px;
-  }
-  .logo-container img {
-    width: 50px;
-    height: 36px;
-  }
-  .logo-container h1 {
-    font-size: 24px;
-  }
-  .login-out {
-    gap: 15px;
-  }
-  .login-out a {
-    font-size: 14px;
-  }
-  .icon {
-    width: 24px;
-    height: 24px;
-  }
+/* Responsive trên các thiết bị */
+/* Responsive cho header */
+/* Ẩn hamburger menu trên desktop */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
+.hamburger img {
+  width: 35px;
+  height: auto;
+}
+
+/* Mobile & tablet view */
 @media (max-width: 768px) {
+  header {
+    padding: 5px 0;
+  }
   .header-top {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    gap: 8px;
+    margin-left: 0;
   }
-  .logo-container {
-    margin-bottom: 10px;
-  }
-  .login-out {
-    justify-content: flex-start;
-    width: 100%;
-  }
-}
 
-@media (max-width: 600px) {
-  .logo-container h1 {
-    font-size: 20px;
-  }
   .login-out {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 15px;
+    margin-left: 0;
   }
-}
 
-/* Responsive cho Thanh điều hướng chính */
-@media (max-width: 992px) {
+  .hamburger {
+    display: block;
+    align-items: center;
+    justify-self: center;
+  }
+
   .main-nav {
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
-  }
-  .main-nav ul {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .search-container {
     width: 100%;
+    background-color: #ecf2f8;
     margin-top: 10px;
   }
-  .search-container input {
-    width: 100%;
-  }
-}
 
-@media (max-width: 600px) {
+  .main-nav.active {
+    display: flex;
+  }
+
   .main-nav ul {
-    gap: 15px;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+    margin: 10px 0;
   }
-  .main-nav ul li a {
-    font-size: 15px;
+
+  .search-container {
+    flex-direction: row;
+    justify-content: space-between;
+    
+    padding: 0 10px;
   }
-  .has-dropdown .dropdown {
-    position: static;
-    min-width: 100%;
+
+  .search-container input {
+    flex-grow: 1;
+  }
+
+  .search-container button {
+    margin-left: 5px;
   }
 }
 

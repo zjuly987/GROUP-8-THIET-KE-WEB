@@ -288,59 +288,6 @@ h2 {
   border-radius: 5px;
 }
 
-/* Responsive cho #more-tours */
-@media (max-width: 980px) {
-  #more-tours {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px; 
-  }
-  #more-tours .tour-item {
-    min-height: 300px; 
-  }
-  #more-tours .tour-item img {
-    height: 120px; 
-  }
-  #more-tours .tour-info button {
-    font-size: 10px; 
-    padding: 4px 8px;
-  }
-  #more-tours .original-price {
-    font-size: 10px; 
-  }
-  #more-tours .price {
-    font-size: 12px; 
-  }
-}
-
-@media (max-width: 600px) {
-  #more-tours {
-    grid-template-columns: 1fr; 
-    gap: 10px; 
-  }
-  #more-tours .tour-item {
-    min-height: 250px; 
-  }
-  #more-tours .tour-item img {
-    height: 100px; 
-  }
-  #more-tours .tour-info {
-    flex-direction: column; 
-    align-items: center;
-  }
-  #more-tours .tour-info button {
-    margin-bottom: 10px;
-  }
-  #more-tours .price-container {
-    align-items: center; 
-  }
-  #more-tours .original-price {
-    font-size: 10px; 
-  }
-  #more-tours .price {
-    font-size: 12px; 
-  }
-}
-
 /* css cho image-container */
 .image-container {
   position: relative; 
@@ -416,84 +363,6 @@ h2 {
   color: #000;
 }
 
-/* Responsive design cho tour category */
-@media (max-width: 1024px) {
-  .tour-category {
-    margin: 10px 20px 40px 20px;
-    padding: 0 15px;
-  }
-
-  .tour-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .tour-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .tour-item {
-    min-height: 380px;
-  }
-
-  .tour-item .itinerary {
-    padding-bottom: 35px; 
-  }
-
-  .tour-item .tour-info {
-    padding: 8px 0;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-  }
-
-  .tour-item button {
-    padding: 8px 30px;
-  }
-
-  .tour-item .price {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 480px) {
-  .tour-item {
-    min-height: 360px;
-  }
-
-  .tour-item img {
-    height: 200px;
-  }
-
-  .tour-item h3 {
-    font-size: 16px;
-  }
-
-  .tour-item .itinerary {
-    font-size: 14px;
-    padding-bottom: 70px; 
-  }
-
-  .tour-item .tour-info {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-  }
-
-  .tour-item button {
-    padding: 8px 20px;
-    width: 100%;
-  }
-
-  .tour-item .price {
-    font-size: 16px;
-    margin-left: 0;
-  }
-}
-
 .load-more {
   background-color: #007acc; 
   color: #ffffff;
@@ -525,17 +394,6 @@ h2 {
   color: #000;
 }
 
-@media (max-width: 992px) {
-  .tour-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 576px) {
-  .tour-grid {
-    grid-template-columns: 1fr;
-  }
-}
 /* css cho hr */
 .divider {
   border: none;
@@ -717,90 +575,6 @@ h2 {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive slideshow ảnh */
-@media (max-width: 768px) {
-  .interested {
-    margin: 20px;
-  }
-
-  .slideshow-container {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  #main-image {
-    border-radius: 10px 10px 0 0;
-  }
-
-  .description {
-    border-radius: 0 0 10px 10px;
-    padding: 20px;
-    background: linear-gradient(135deg, #f9f9f9 0%, #e8ecef 100%);
-  }
-
-  .description h2 {
-    font-size: 1.6em;
-    font-weight: 600;
-  }
-
-  .description p {
-    font-size: 1em;
-    line-height: 1.6;
-    margin-bottom: 12px;
-  }
-
-  .description p:last-child {
-    margin-bottom: 0;
-  }
-
-  .description::before {
-    width: 4px;
-  }
-
-  .description:hover::before {
-    width: 8px;
-  }
-
-  .thumbnail-container {
-    gap: 10px;
-    padding: 8px;
-  }
-
-  .thumbnail {
-    width: 70px;
-    height: 50px;
-    border-radius: 4px;
-  }
-
-  .thumbnail.active, .thumbnail:hover {
-    transform: scale(1.1);
-  }
-}
-
-@media (max-width: 480px) {
-  .thumbnail-container {
-    gap: 8px;
-  }
-
-  .thumbnail {
-    width: 60px;
-    height: 45px;
-  }
-
-  .description h2 {
-    font-size: 1.4em;
-  }
-
-  .description p {
-    font-size: 0.9em;
-    margin-bottom: 10px;
-  }
-
-  .description p:last-child {
-    margin-bottom: 0;
-  }
-}
-
 /* css cho phần Có thể bạn quan tâm*/
 .seemore {
   margin: 20px 130px;
@@ -967,7 +741,8 @@ a{
 #backToTopBtn:hover {
   background-color: #fff;
 }
-/* responsive trên các thiết bị */
+
+/* Responsive trên các thiết bị */
 /* Responsive cho header*/
 /* Ẩn hamburger menu trên desktop */
 .hamburger {
@@ -1039,86 +814,6 @@ a{
 
   .search-container button {
     margin-left: 5px;
-  }
-}
-/* Responsive cho Tiêu đề (Header) */
-@media (max-width: 992px) {
-  header {
-    padding: 5px 20px;
-  }
-  .logo-container img {
-    width: 50px;
-    height: 36px;
-  }
-  .logo-container h1 {
-    font-size: 24px;
-  }
-  .login-out {
-    gap: 15px;
-  }
-  .login-out a {
-    font-size: 14px;
-  }
-  .icon {
-    width: 24px;
-    height: 24px;
-  }
-}
-
-@media (max-width: 768px) {
-  .header-top {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .logo-container {
-    margin-bottom: 10px;
-  }
-  .login-out {
-    justify-content: flex-start;
-    width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .logo-container h1 {
-    font-size: 20px;
-  }
-  .login-out {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-}
-
-/* Responsive cho Thanh điều hướng chính */
-@media (max-width: 992px) {
-  .main-nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .main-nav ul {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .search-container {
-    width: 100%;
-    margin-top: 10px;
-  }
-  .search-container input {
-    width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .main-nav ul {
-    gap: 15px;
-  }
-  .main-nav ul li a {
-    font-size: 15px;
-  }
-  .has-dropdown .dropdown {
-    position: static;
-    min-width: 100%;
   }
 }
 
