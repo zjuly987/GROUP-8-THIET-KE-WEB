@@ -25,36 +25,30 @@
     }
   });
 //slideshow
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
+let currentIndex = 0;
+let currentSlide = document.getElementsByClassName("slide");
+let currentTimer
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove('active');
-  });
-  slides[index].classList.add('active');
+function showcurrentSlide () {
+  for (let i = 0; i < currentSlide.length; i++) {
+    currentSlide[i].classList.remove("active");
+  }
+
+  currentIndex++;
+  if (currentIndex > currentSlide.length) currentIndex = 1;
+  currentSlide[currentIndex - 1].classList.add("active");
+
+  currentTimer = setTimeout(showcurrentSlide, 8000);
 }
 
-  showSlide(currentSlide); // Hiển thị slide đầu tiên
-  setInterval(nextSlide, 8000); // Chuyển sau mỗi 8 giây
-
-    // Bắt sự kiện click
-document.getElementById('underbanner-prev').addEventListener('click', prevSlide);
-document.getElementById('underbanner-next').addEventListener('click', nextSlide);
-
-function plusUnderbannerSlides(n) {
-  currentSlide = (currentSlide + n + slides.length) % slides.length;
-  showSlide(currentSlide);
-}
-function prevSlide() {
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  showSlide(currentSlide);
+function pluscurrentSlide(n) {
+  clearTimeout(currentTimer);
+  currentIndex += n - 1;
+  if (currentIndex < 0) currentIndex = currentSlide.length - 1;
+  showcurrentSlide();
 }
 
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
-}
+window.onload = showcurrentSlide;
 
 //trở về đầu trang
 // Hiển thị nút khi cuộn xuống 100px
