@@ -37,12 +37,14 @@ body {
 }
 
 .title {
-    font-family: 'Rakkas', cursive;
+    font-family: 'Inter', sans-serif;
     font-size: 36px;
     text-align: center;
     margin-bottom: 40px;
     color: #2a2a2a;
+    font-weight: 600;
 }
+
 
 /* ==== FORM ==== */
 form {
