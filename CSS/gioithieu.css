@@ -158,11 +158,11 @@ header {
 }
 .meaning-container {
   position: relative;
-  color: white;
   text-align: center;
   overflow: hidden;
-  padding-top: 100px;
-  background-color: red !important;
+  padding-top: 80px;
+  box-sizing: border-box;
+  width: 100%;
 }
 .meaning-container::before {
   content: "";
@@ -170,6 +170,8 @@ header {
   inset: 0;
   background: url('../images/Giới thiệu/gioithieu.png') center/cover no-repeat;
   z-index: 1;
+  width: 100%;
+  height: 100%;
 }
 .meaning-container::after {
   content: "";
@@ -177,6 +179,9 @@ header {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 2;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
 .meaning-container h2,
 .meaning-container p {
@@ -204,7 +209,9 @@ header {
   line-height: 1.6;
   text-align: justify;
   max-width: 100%; 
-  padding: 0 120px 40px 120px;
+  padding: 0 80px 40px 80px;
+  box-sizing: border-box;
+  word-break: break-word;
 }
 
 /*sứ mệnh*/
@@ -272,17 +279,6 @@ header {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .mission-container {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .mission-content,
-  .slideshow {
-    width: 100%;
-  }
-}
 /*đặc điểm*/
 .features .title{
   text-align:  center;
@@ -338,42 +334,6 @@ header {
 .feature-box:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 768px) {
-    .feature-box {
-        flex: 1 1 100%;
-        height: auto;
-    }
-
-    .commitment-container {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .commitment-title {
-        flex: 1;
-        padding: 30px 0;
-        text-align: center;
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .commitment-content {
-        flex: 1;
-        padding: 20px;
-    }
-}
-@media (max-width: 768px) {
-    .feature-box {
-        height: 200px; /* hoặc 180px tùy cảm nhận */
-    }
-}
-
-@media (max-width: 480px) {
-    .feature-box {
-        height: 150px;
-    }
 }
 
 /*triết lý hđ*/
@@ -689,59 +649,6 @@ height: 30px;
   border-radius: 5px;
 }
 
-/* Responsive cho #more-tours */
-@media (max-width: 980px) {
-  #more-tours {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px; 
-  }
-  #more-tours .tour-item {
-    min-height: 300px; 
-  }
-  #more-tours .tour-item img {
-    height: 120px; 
-  }
-  #more-tours .tour-info button {
-    font-size: 10px; 
-    padding: 4px 8px;
-  }
-  #more-tours .original-price {
-    font-size: 10px; 
-  }
-  #more-tours .price {
-    font-size: 12px; 
-  }
-}
-
-@media (max-width: 600px) {
-  #more-tours {
-    grid-template-columns: 1fr; 
-    gap: 10px; 
-  }
-  #more-tours .tour-item {
-    min-height: 250px; 
-  }
-  #more-tours .tour-item img {
-    height: 100px; 
-  }
-  #more-tours .tour-info {
-    flex-direction: column; 
-    align-items: center;
-  }
-  #more-tours .tour-info button {
-    margin-bottom: 10px;
-  }
-  #more-tours .price-container {
-    align-items: center; 
-  }
-  #more-tours .original-price {
-    font-size: 10px; 
-  }
-  #more-tours .price {
-    font-size: 12px; 
-  }
-}
-
 /* css cho image-container */
 .image-container {
   position: relative; 
@@ -840,4 +747,105 @@ height: 30px;
 .underbanner-next {
   right: 10px;
   border-radius: 4px 0 0 4px;
+}
+
+/*res cho header*/
+/* Ẩn hamburger menu trên desktop */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger img {
+  width: 35px;
+  height: auto;
+}
+
+/* Mobile & tablet view */
+@media (max-width: 768px) {
+  header {
+    padding: 5px 0;
+  }
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-left: 0;
+  }
+
+  .login-out {
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 15px;
+    margin-left: 0;
+  }
+
+  .hamburger {
+    display: block;
+    align-items: center;
+    justify-self: center;
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ecf2f8;
+    margin-top: 10px;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+    margin: 10px 0;
+
+  }
+
+  .search-container {
+    flex-direction: row;
+    justify-content: space-between;
+    
+    padding: 0 10px;
+  }
+
+  .search-container input {
+    flex-grow: 1;
+  }
+
+  .search-container button {
+    margin-left: 5px;
+  }
+
+  .meaning-container::before {
+    background: url('../images/Giới thiệu/gioithieu.png') center/cover no-repeat;
+    background-position: center top;
+  }
+
+  .highlight {
+    flex-direction: column;
+    padding: 0 20px;
+    margin: 80px 20px 100px 20px;
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .meaning-title {
+    margin: 20px auto;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .meaning-text {
+    padding: 0 30px 30px 30px;
+    font-size: 0.95em;
+    text-align: justify;
+  }
+
 }
