@@ -72,4 +72,11 @@ function nextSlide() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+const cartIcon = document.querySelector('a[href="cart.html"]');
+  if (cartIcon) {
+    cartIcon.addEventListener("click", (e) => {
+      e.preventDefault();
+      openCartPopup();
+    });
+  }
 

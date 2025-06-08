@@ -54,3 +54,21 @@ document.querySelectorAll('.contact-faq a').forEach(a => {
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  // thông báo sau khi gửi yêu cầu tư vấn
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".contact-form form");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Yêu cầu tư vấn đã được gửi thành công!");
+    form.reset(); // Xóa dữ liệu form sau khi gửi
+  });
+});
+
+const cartIcon = document.querySelector('a[href="cart.html"]');
+  if (cartIcon) {
+    cartIcon.addEventListener("click", (e) => {
+      e.preventDefault();
+      openCartPopup();
+    });
+  }
