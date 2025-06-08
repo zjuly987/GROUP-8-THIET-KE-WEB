@@ -56,6 +56,18 @@ header {
   height: 30px;
 }
 
+/* Ẩn hamburger menu trên desktop */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.hamburger img {
+  width: 35px;
+  height: auto;
+}
+
 /*css cho thanh điều hướng ở banner*/
 .main-nav {
   display: flex;
@@ -277,4 +289,157 @@ header {
 }
 #backToTopBtn:hover {
   background-color: #fff;
+}
+
+/*res cho header*/
+/* Mobile & tablet view */
+@media (max-width: 768px) {
+  header {
+    padding: 5px 0;
+  }
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-left: 0;
+  }
+  .login-out {
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 15px;
+    margin-left: 0;
+  }
+  .hamburger {
+    display: block;
+    align-items: center;
+    justify-self: center;
+  }
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ecf2f8;
+    margin-top: 10px;
+  }
+  .main-nav.active {
+    display: flex;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+    margin: 10px 0;
+  }
+  .search-container {
+    flex-direction: row;
+    justify-content: space-between;
+    
+    padding: 0 10px;
+  }
+  .search-container input {
+    flex-grow: 1;
+  }
+  .search-container button {
+    margin-left: 5px;
+  }
+}
+
+/*res cho nội dung chính của điều khoản quy định*/
+/* Tablet */
+@media (max-width: 1024px) {
+  .hi {
+    font-size: 18px;
+    padding: 100px 60px 10px 60px;
+  }
+  .container {
+    padding: 10px 60px;
+    gap: 30px;
+  }
+  .sidebar {
+    width: 250px;
+  }
+  .sidebar h3 {
+    font-size: 16px;
+  }
+  .submenu li {
+    font-size: 15px;
+  }
+  .section p,
+  .section ul {
+    font-size: 15px;
+  }
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .hi {
+    font-size: 17px;
+    padding: 90px 30px 10px 30px;
+  }
+  .container {
+    flex-direction: column;
+    padding: 10px 30px;
+    gap: 20px;
+  }
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+  }
+  .sidebar h3 {
+    font-size: 15px;
+  }
+  .submenu li {
+    font-size: 14px;
+  }
+  .section p,
+  .section ul {
+    font-size: 14px;
+  }
+}
+/* Mobile nhỏ */
+@media (max-width: 480px) {
+  .hi {
+    font-size: 16px;
+    padding: 80px 20px 10px 20px;
+  }
+  .container {
+    padding: 10px 20px;
+  }
+  .submenu {
+    padding: 0 5px;
+  }
+  .submenu li {
+    font-size: 13.5px;
+  }
+  .section h3 {
+    font-size: 15px;
+  }
+  .section p,
+  .section ul {
+    font-size: 13.5px;
+  }
+}
+/* Siêu nhỏ */
+@media (max-width: 360px) {
+  .hi {
+    font-size: 15px;
+    padding: 70px 10px 10px 10px;
+  }
+  .container {
+    padding: 10px;
+  }
+  .sidebar h3 {
+    font-size: 14px;
+  }
+  .submenu li {
+    font-size: 13px;
+  }
+  .section h3 {
+    font-size: 14px;
+  }
+  .section p,
+  .section ul {
+    font-size: 13px;
+  }
 }
