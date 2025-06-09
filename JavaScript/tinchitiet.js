@@ -70,40 +70,4 @@ window.onscroll = function () {
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-/* js cho carousel */
-//slideshow ảnh
-let slideIndex = 0;
-let slides = document.getElementsByClassName("slide");
-let autoSlideTimer;
 
-function showSlide(n) {
-  if (n >= slides.length) { slideIndex = 0 }
-  if (n < 0) { slideIndex = slides.length - 1 }
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  slides[slideIndex].style.display = "block";
-}
-
-function changeSlide(n) {
-  clearTimeout(autoSlideTimer); // Dừng chạy tự động khi dùng nút
-  slideIndex += n;
-  showSlide(slideIndex);
-  autoSlide(); // Tiếp tục chạy tự động
-}
-
-function autoSlide() {
-  autoSlideTimer = setTimeout(() => {
-    slideIndex++;
-    showSlide(slideIndex);
-    autoSlide(); // gọi lại chính nó
-  }, 4000);
-}
-
-// Khởi tạo slide đầu tiên
-document.addEventListener("DOMContentLoaded", () => {
-  showSlide(slideIndex);
-  autoSlide();
-});
