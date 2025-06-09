@@ -1,14 +1,14 @@
 //header không che mất nội dung bên dưới
-  function updateMainPadding() {
-    const header = document.querySelector("header");
-    const main = document.querySelector(".intro-container");
-    if (header && main) {
-      main.style.paddingTop = header.offsetHeight + "px";
-    }
+function updateMainPadding() {
+  const header = document.querySelector("header");
+  const main = document.querySelector(".intro-container");
+  if (header && main) {
+    main.style.paddingTop = header.offsetHeight + "px";
   }
+}
 
-  window.addEventListener("load", updateMainPadding);
-  window.addEventListener("resize", updateMainPadding);
+window.addEventListener("load", updateMainPadding);
+window.addEventListener("resize", updateMainPadding);
 //ẩn đi
 let lastScrollTop = 0;
 window.addEventListener('scroll', function () {
@@ -41,21 +41,21 @@ document.querySelectorAll('.contact-faq a').forEach(a => {
 
 //trở về đầu trang
 // Hiển thị nút khi cuộn xuống 100px
-  window.onscroll = function () {
-    const btn = document.getElementById("backToTopBtn");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      btn.style.display = "block";
-    } else {
-      btn.style.display = "none";
-    }
-  };
-
-  // Hàm cuộn về đầu trang
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+window.onscroll = function () {
+  const btn = document.getElementById("backToTopBtn");
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
   }
+};
 
-  // thông báo sau khi gửi yêu cầu tư vấn
+// Hàm cuộn về đầu trang
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// thông báo sau khi gửi yêu cầu tư vấn
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".contact-form form");
   form.addEventListener("submit", function (e) {
@@ -66,9 +66,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const cartIcon = document.querySelector('a[href="cart.html"]');
-  if (cartIcon) {
-    cartIcon.addEventListener("click", (e) => {
-      e.preventDefault();
-      openCartPopup();
-    });
-  }
+if (cartIcon) {
+  cartIcon.addEventListener("click", (e) => {
+    e.preventDefault();
+    openCartPopup();
+  });
+}
