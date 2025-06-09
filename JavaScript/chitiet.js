@@ -228,18 +228,131 @@ function checkout() {
   }
 }
 
-
-
-
-// thông báo sau khi yêu cầu tư vấn
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector(".form-container form");
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert("Yêu cầu tư vấn đã được gửi thành công!");
-    form.reset(); // Xóa dữ liệu form sau khi gửi
+// Nhận tư vấn
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.querySelector('.form-container form');    
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Ngăn form submit mặc định        
+    // Lấy các giá trị từ form
+    const name = document.getElementById('name').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const people = document.getElementById('people').value;
+    const confirmation = document.getElementById('confirmation').checked;    
+    // Kiểm tra validation cơ bản
+    if (!name || !email || !phone) {
+      alert('Vui lòng điền đầy đủ thông tin bắt buộc (Họ tên, Email, Số điện thoại)');
+      return;
+    }   
+    // Kiểm tra checkbox xác nhận
+    if (!confirmation) {
+      alert('Vui lòng xác nhận thông tin trước khi gửi');
+      return;
+      }      
+    // Kiểm tra email hợp lệ
+    const emailRegex = /^[^\s@]+@gmail\.com$/;
+    if (!emailRegex.test(email)) {
+        alert('Vui lòng nhập email hợp lệ (@gmail.com)');
+        return;
+    }      
+    // Kiểm tra số điện thoại (cơ bản)
+    const phoneRegex = /^0[0-9]{9}$/;
+    if (!phoneRegex.test(phone.replace(/\s/g, ''))) {
+        alert('Vui lòng nhập số điện thoại hợp lệ (10 số, bắt đầu bằng 0)');
+        return;
+    }
+    // Hiển thị thông báo thành công
+    showSuccessMessage();
+    // Reset form sau khi gửi thành công
+    form.reset();
   });
 });
+// Hàm hiển thị thông báo thành công
+function showSuccessMessage() {
+  // Tạo div thông báo
+  const alertDiv = document.createElement('div');
+  alertDiv.innerHTML = `
+    <!-- Lớp overlay che toàn màn hình -->
+    <div style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      animation: fadeIn 0.3s ease-in-out;">
+    <!-- Hộp thông báo chính -->
+    <div style="
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      max-width: 450px;
+      margin: 20px;
+      animation: slideIn 0.3s ease-out;">
+      <!-- Icon tick xanh -->
+      <div style="
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;">
+        <span style="color: white; font-size: 30px; font-weight: bold;">✅</span></div>  
+        <!-- Tiêu đề hiển thị -->  
+        <h3 style="color: #28a745; margin-bottom: 15px; font-size: 24px;">Thành công!</h3>
+        <p style="
+          margin-bottom: 25px; 
+          line-height: 1.6; 
+          color: #333;
+          font-size: 16px;">
+          <strong>Đã gửi yêu cầu tư vấn thành công.</strong><br>Vui lòng chú ý điện thoại để nhận tư vấn.</p>
+          <button onclick="this.closest('div').parentNode.remove()" style="
+            background: linear-gradient(45deg, #28a745, #20a03a);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+            min-width: 80px;
+            " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+              OK
+          </button>
+      </div>
+    </div>
+    <!-- CSS cho các hiệu ứng animation -->
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes slideIn {
+        from { transform: translateY(-50px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+    </style>
+`;
+// Thêm modal vào cuối trang web    
+document.body.appendChild(alertDiv);
+}
+// Tạo CSS cho hiệu ứng xoay (dùng cho loading)
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes spin {
+        from { transform: rotate(0deg); }    /* Từ 0 độ */
+        to { transform: rotate(360deg); }    /* Xoay 360 độ */
+    }
+`;
+document.head.appendChild(style); // Thêm CSS vào head của trang
 
 // xử lý thêm giỏ hàng
 document.addEventListener("DOMContentLoaded", () => {
