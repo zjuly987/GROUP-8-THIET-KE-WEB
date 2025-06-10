@@ -226,11 +226,6 @@ header {
   flex: 1 1 45%;
   flex-wrap: nowrap;
 }
-@media (max-width: 600px) {
-  .intro-infor p {
-    flex: 1 1 100%;
-  }
-}
 .price-container {
   display: flex; 
   flex-wrap: wrap;
